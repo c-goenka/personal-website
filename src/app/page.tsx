@@ -6,8 +6,8 @@ import { ThemeToggle } from "../../components/ThemeToggle";
 export default function Home() {
     return (
         <div className="max-w-3xl mx-auto px-8 py-20">
-            {/* Profile Photo */}
-            <div className="mb-8">
+            {/* Profile Photo and Theme Toggle */}
+            <div className="mb-8 flex justify-between items-start">
                 <div className="w-32 h-32 rounded-full overflow-hidden">
                     <Image
                         src="/images/chetan.jpeg"
@@ -17,6 +17,7 @@ export default function Home() {
                         className="w-full h-full object-cover"
                     />
                 </div>
+                <ThemeToggle />
             </div>
 
             {/* Name */}
@@ -90,15 +91,14 @@ export default function Home() {
                 </div>
             </div>
 
-            {/* Terminal Hint and Theme Toggle */}
-            <div className="flex justify-between items-center -mt-4">
+            {/* Terminal Hint */}
+            <div className="-mt-4">
                 <button
                     className="text-muted hover:text-muted-hover transition-colors text-sm font-mono"
                     title="Enter the lab"
                 >
                     &gt;_
                 </button>
-                <ThemeToggle />
             </div>
         </div>
     );
