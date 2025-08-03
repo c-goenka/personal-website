@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ExternalLink } from "lucide-react";
-import { LuLinkedin, LuGithub } from "react-icons/lu";
+import { LuLinkedin, LuGithub, LuLink, LuFileUser } from "react-icons/lu";
 
 export default function Home() {
     return (
@@ -23,13 +23,13 @@ export default function Home() {
             <div className="mb-8">
                 <h1 className="text-3xl font-semibold mb-4">Hi! I&apos;m Chetan.</h1>
                 <p className="text-gray-600 leading-relaxed">
-                    I&apos;m an HCI researcher and EECS M.S. student at UC Berkeley, exploring how human behavior and technology design intersect through machine learning and AI. I&apos;m passionate about creating solutions that address real-world challenges and enhance human-computer interactions.
+                    I&apos;m an HCI researcher and EECS M.S. student at UC Berkeley, exploring how human behavior and technology design intersect through machine learning and AI. I'm passionate about creating solutions that address real-world challenges and enhance human-computer interactions.
                 </p>
                 <p className="text-gray-600 leading-relaxed mt-4">
                     Currently investigating how AI coding tools can be designed to better serve both professional developers and programming beginners, focusing on creating more intuitive, personalized, and effective coding experiences.
                 </p>
                 <p className="text-gray-600 leading-relaxed mt-4">
-                    I am interested in science, philosophy, design, and programming tools. If you&apos;re interested in collaborating, or just want to chat, feel free to reach out at <a href="mailto:cgoenka@berkeley.edu" className="underline decoration-wavy underline-offset-4 decoration-gray-400 hover:text-black transition-colors">cgoenka@berkeley.edu</a>
+                    I&apos;m interested in research and industry opportunities that bridge technology and human experience. Feel free to reach out at <a href="mailto:cgoenka@berkeley.edu" className="underline decoration-wavy underline-offset-4 decoration-gray-400 hover:text-black transition-colors">cgoenka@berkeley.edu</a>.
                 </p>
             </div>
 
@@ -56,10 +56,19 @@ export default function Home() {
                             <LuGithub size={18} />
                             GitHub
                         </a>
+                        <a
+                            href="/chetan-goenka-resume.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-gray-600 hover:text-black transition-colors flex items-center gap-2"
+                        >
+                            <LuFileUser size={18} />
+                            Resume
+                        </a>
                     </div>
 
                     {/* Divider */}
-                    <div className="border-l border-gray-400 h-15"></div>
+                    <div className="border-l border-gray-400 h-22"></div>
 
                     {/* Navigation Links */}
                     <div className="flex flex-col gap-2">
@@ -67,14 +76,14 @@ export default function Home() {
                             href="/research"
                             className="text-gray-600 hover:text-black transition-colors flex items-center gap-2"
                         >
-                            <ExternalLink size={18} />
+                            <LuLink size={16} />
                             Research
                         </Link>
                         <Link
                             href="/thoughts"
                             className="text-gray-600 hover:text-black transition-colors flex items-center gap-2"
                         >
-                            <ExternalLink size={18} />
+                            <LuLink size={16} />
                             Thoughts
                         </Link>
                     </div>
