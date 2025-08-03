@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Linkedin, Github} from "lucide-react";
+import { ExternalLink } from "lucide-react";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 export default function Home() {
     return (
@@ -43,7 +44,7 @@ export default function Home() {
                             rel="noopener noreferrer"
                             className="text-gray-600 hover:text-black transition-colors flex items-center gap-2"
                         >
-                            <Linkedin size={18} />
+                            <FaLinkedin size={18} />
                             LinkedIn
                         </a>
                         <a
@@ -52,7 +53,7 @@ export default function Home() {
                             rel="noopener noreferrer"
                             className="text-gray-600 hover:text-black transition-colors flex items-center gap-2"
                         >
-                            <Github size={18} />
+                            <FaGithub size={18} />
                             GitHub
                         </a>
                     </div>
@@ -64,14 +65,16 @@ export default function Home() {
                     <div className="flex flex-col gap-2">
                         <Link
                             href="/research"
-                            className="text-gray-600 hover:text-black transition-colors"
+                            className="text-gray-600 hover:text-black transition-colors flex items-center gap-2"
                         >
+                            <ExternalLink size={18} />
                             Research
                         </Link>
                         <Link
                             href="/thoughts"
-                            className="text-gray-600 hover:text-black transition-colors"
+                            className="text-gray-600 hover:text-black transition-colors flex items-center gap-2"
                         >
+                            <ExternalLink size={18} />
                             Thoughts
                         </Link>
                     </div>
