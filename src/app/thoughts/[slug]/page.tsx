@@ -53,7 +53,7 @@ export default function ThoughtPage({ params }: PageProps) {
                 </header>
 
                 {/* Article Content */}
-                <MarkdownContent content={thought.content} />
+                <MarkdownContent content={thought.content} showTOC={true} />
             </article>
         </div>
     );
