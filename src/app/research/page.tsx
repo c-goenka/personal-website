@@ -1,40 +1,89 @@
 import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
+import { LuExternalLink, LuFileText, LuCode, LuGlobe } from "react-icons/lu";
+import { getAllResearchProjects, getStatusLabel, getStatusColor } from "../../data/research";
+import { Breadcrumb } from "../../components/Breadcrumb";
 
 export default function Research() {
+    const projects = getAllResearchProjects();
+    
+    const breadcrumbItems = [
+        { label: "Home", href: "/" },
+        { label: "Research", href: "/research" }
+    ];
+
+    const getLinkIcon = (type: string) => {
+        switch (type) {
+            case 'pdf':
+                return <LuFileText size={14} />;
+            case 'code':
+                return <LuCode size={14} />;
+            case 'demo':
+            case 'website':
+                return <LuGlobe size={14} />;
+            default:
+                return <LuExternalLink size={14} />;
+        }
+    };
+
     return (
         <div className="max-w-3xl mx-auto px-8 py-20">
-            {/* Back to Home */}
-            <div className="mb-8">
-                <Link 
-                    href="/" 
-                    className="text-muted hover:text-muted-hover transition-colors text-sm flex items-center gap-2"
-                >
-                    <ArrowLeft size={16} />
-                    Back to Home
-                </Link>
-            </div>
+            {/* Breadcrumb Navigation */}
+            <Breadcrumb items={breadcrumbItems} />
 
-            <h1 className="text-3xl font-semibold mb-8">Research</h1>
+            <h1 className="text-3xl font-semibold mb-2">Research</h1>
+            <p className="text-muted mb-12">Exploring human-computer interaction and AI-assisted programming.</p>
             
-            {/* Research Interests */}
-            <div className="mb-12">
-                <h2 className="text-xl font-medium mb-4">Research Interests</h2>
-                <p className="text-muted leading-relaxed mb-6">
-                    Human-computer interaction, user experience design, accessibility,
-                    behavioral design patterns, and emerging interaction paradigms.
-                </p>
-            </div>
-
-            {/* Placeholder for Projects */}
-            <div className="mb-12">
-                <h2 className="text-xl font-medium mb-4">Current Projects</h2>
-                <p className="text-muted leading-relaxed mb-4">
-                    This section will showcase my research projects, publications, and academic work.
-                </p>
-                <p className="text-muted leading-relaxed">
-                    Coming soon: Project details, demos, and publication links.
-                </p>
+            {/* Research Projects */}
+            <div className="space-y-6">
+                {projects.map((project) => (
+                    <div key={project.id} className="border border-border rounded-lg p-6 hover:border-muted hover:bg-muted/5 transition-all duration-200">
+                        {/* Status Badge and Title */}
+                        <div className="flex items-start gap-3 mb-3">
+                            <span className={`px-2 py-1 text-xs font-medium rounded-md ${getStatusColor(project.status)}`}>
+                                {getStatusLabel(project.status)}
+                            </span>
+                        </div>
+                        
+                        {/* Title */}
+                        <h2 className="text-xl font-semibold mb-3 text-foreground">
+                            {project.title}
+                        </h2>
+                        
+                        {/* Description */}
+                        <p className="text-muted leading-relaxed mb-4">
+                            {project.description}
+                        </p>
+                        
+                        {/* Venue and Links */}
+                        <div className="flex items-center gap-4 text-sm">
+                            {/* Venue Info */}
+                            {project.venue && (
+                                <span className="text-muted">
+                                    {project.venue} {project.year}
+                                </span>
+                            )}
+                            {project.year && !project.venue && (
+                                <span className="text-muted">{project.year}</span>
+                            )}
+                            
+                            {/* Links */}
+                            {Object.entries(project.links).map(([type, url]) => (
+                                url && (
+                                    <Link
+                                        key={type}
+                                        href={url}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="flex items-center gap-1 text-muted hover:text-muted-hover transition-colors"
+                                    >
+                                        {getLinkIcon(type)}
+                                        {type.charAt(0).toUpperCase() + type.slice(1)}
+                                    </Link>
+                                )
+                            ))}
+                        </div>
+                    </div>
+                ))}
             </div>
         </div>
     );
