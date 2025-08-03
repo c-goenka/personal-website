@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ExternalLink } from "lucide-react";
 import { LuLinkedin, LuGithub, LuLink, LuFileUser } from "react-icons/lu";
+import { ThemeToggle } from "../../components/ThemeToggle";
 
 export default function Home() {
     return (
@@ -22,14 +23,14 @@ export default function Home() {
             {/* Name */}
             <div className="mb-8">
                 <h1 className="text-3xl font-semibold mb-4">Hi! I&apos;m Chetan.</h1>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-muted leading-relaxed">
                     I&apos;m an HCI researcher and EECS M.S. student at UC Berkeley, exploring how human behavior and technology design intersect through machine learning and AI. I'm passionate about creating solutions that address real-world challenges and enhance human-computer interactions.
                 </p>
-                <p className="text-gray-600 leading-relaxed mt-4">
+                <p className="text-muted leading-relaxed mt-4">
                     Currently investigating how AI coding tools can be designed to better serve both professional developers and programming beginners, focusing on creating more intuitive, personalized, and effective coding experiences.
                 </p>
-                <p className="text-gray-600 leading-relaxed mt-4">
-                    I&apos;m interested in research and industry opportunities that bridge technology and human experience. Feel free to reach out at <a href="mailto:cgoenka@berkeley.edu" className="underline decoration-wavy underline-offset-4 decoration-gray-400 hover:text-black transition-colors">cgoenka@berkeley.edu</a>.
+                <p className="text-muted leading-relaxed mt-4">
+                    I&apos;m interested in research and industry opportunities that bridge technology and human experience. Feel free to reach out at <a href="mailto:cgoenka@berkeley.edu" className="underline decoration-wavy underline-offset-4 decoration-decoration hover:text-muted-hover transition-colors">cgoenka@berkeley.edu</a>.
                 </p>
             </div>
 
@@ -42,7 +43,7 @@ export default function Home() {
                             href="https://linkedin.com/in/cgoenka"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-gray-600 hover:text-black transition-colors flex items-center gap-2"
+                            className="text-muted hover:text-muted-hover transition-colors flex items-center gap-2"
                         >
                             <LuLinkedin size={18} />
                             LinkedIn
@@ -51,7 +52,7 @@ export default function Home() {
                             href="https://github.com/c-goenka"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-gray-600 hover:text-black transition-colors flex items-center gap-2"
+                            className="text-muted hover:text-muted-hover transition-colors flex items-center gap-2"
                         >
                             <LuGithub size={18} />
                             GitHub
@@ -60,7 +61,7 @@ export default function Home() {
                             href="/chetan-goenka-resume.pdf"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-gray-600 hover:text-black transition-colors flex items-center gap-2"
+                            className="text-muted hover:text-muted-hover transition-colors flex items-center gap-2"
                         >
                             <LuFileUser size={18} />
                             Resume
@@ -68,20 +69,20 @@ export default function Home() {
                     </div>
 
                     {/* Divider */}
-                    <div className="border-l border-gray-400 h-22"></div>
+                    <div className="border-l border-border h-22"></div>
 
                     {/* Navigation Links */}
                     <div className="flex flex-col gap-2">
                         <Link
                             href="/research"
-                            className="text-gray-600 hover:text-black transition-colors flex items-center gap-2"
+                            className="text-muted hover:text-muted-hover transition-colors flex items-center gap-2"
                         >
                             <LuLink size={16} />
                             Research
                         </Link>
                         <Link
                             href="/thoughts"
-                            className="text-gray-600 hover:text-black transition-colors flex items-center gap-2"
+                            className="text-muted hover:text-muted-hover transition-colors flex items-center gap-2"
                         >
                             <LuLink size={16} />
                             Thoughts
@@ -90,14 +91,15 @@ export default function Home() {
                 </div>
             </div>
 
-            {/* Terminal Hint */}
-            <div className="-mt-4">
+            {/* Terminal Hint and Theme Toggle */}
+            <div className="flex justify-between items-center -mt-4">
                 <button
-                    className="text-gray-500 hover:text-gray-700 transition-colors text-sm font-mono"
+                    className="text-muted hover:text-muted-hover transition-colors text-sm font-mono"
                     title="Enter the lab"
                 >
                     &gt;_
                 </button>
+                <ThemeToggle />
             </div>
         </div>
     );
