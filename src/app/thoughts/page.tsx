@@ -8,7 +8,7 @@ export default function Thoughts() {
             <div className="mb-8">
                 <Link 
                     href="/" 
-                    className="text-gray-600 hover:text-black transition-colors text-sm flex items-center gap-2"
+                    className="text-muted hover:text-muted-hover transition-colors text-sm flex items-center gap-2"
                 >
                     <ArrowLeft size={16} />
                     Back to Home
@@ -17,10 +17,10 @@ export default function Thoughts() {
 
             <h1 className="text-3xl font-semibold mb-8">Thoughts</h1>
             
-            <p className="text-gray-600 leading-relaxed mb-4">
+            <p className="text-muted leading-relaxed mb-4">
                 This page will feature my blog posts, reflections on HCI research, design insights, and personal observations.
             </p>
-            <p className="text-gray-600 leading-relaxed">
+            <p className="text-muted leading-relaxed">
                 Coming soon: Blog posts about design, research, and technology.
             </p>
         </div>

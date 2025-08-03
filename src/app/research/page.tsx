@@ -8,7 +8,7 @@ export default function Research() {
             <div className="mb-8">
                 <Link 
                     href="/" 
-                    className="text-gray-600 hover:text-black transition-colors text-sm flex items-center gap-2"
+                    className="text-muted hover:text-muted-hover transition-colors text-sm flex items-center gap-2"
                 >
                     <ArrowLeft size={16} />
                     Back to Home
@@ -20,7 +20,7 @@ export default function Research() {
             {/* Research Interests */}
             <div className="mb-12">
                 <h2 className="text-xl font-medium mb-4">Research Interests</h2>
-                <p className="text-gray-600 leading-relaxed mb-6">
+                <p className="text-muted leading-relaxed mb-6">
                     Human-computer interaction, user experience design, accessibility,
                     behavioral design patterns, and emerging interaction paradigms.
                 </p>
@@ -29,10 +29,10 @@ export default function Research() {
             {/* Placeholder for Projects */}
             <div className="mb-12">
                 <h2 className="text-xl font-medium mb-4">Current Projects</h2>
-                <p className="text-gray-600 leading-relaxed mb-4">
+                <p className="text-muted leading-relaxed mb-4">
                     This section will showcase my research projects, publications, and academic work.
                 </p>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-muted leading-relaxed">
                     Coming soon: Project details, demos, and publication links.
                 </p>
             </div>
