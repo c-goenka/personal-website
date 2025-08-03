@@ -26,17 +26,14 @@ export default function Home() {
                 <p className="text-gray-600 leading-relaxed mt-4">
                     Currently investigating how AI coding tools can be designed to better serve both professional developers and programming beginners, focusing on creating more intuitive, personalized, and effective coding experiences.
                 </p>
+                <p className="text-gray-600 leading-relaxed mt-4">
+                    I am interested in science, philosophy, design, and programming tools. If you're interested in collaborating, or just want to chat, feel free to reach out at <a href="mailto:cgoenka@berkeley.edu" className="underline decoration-wavy underline-offset-4 hover:text-black transition-colors">cgoenka[at]berkeley[dot]edu</a>
+                </p>
             </div>
 
             {/* Contact Links */}
             <div className="mb-12">
                 <div className="flex flex-col gap-2">
-                    <a
-                        href="mailto:cgoenka@berkeley.edu"
-                        className="text-gray-600 hover:text-black transition-colors"
-                    >
-                        cgoenka[at]berkeley[dot]edu
-                    </a>
                     <a
                         href="https://linkedin.com/in/yourprofile"
                         target="_blank"
