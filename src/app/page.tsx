@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Home() {
     return (
-        <div className="max-w-lg mx-auto px-8 py-20">
+        <div className="max-w-3xl mx-auto px-8 py-20">
             {/* Profile Photo */}
             <div className="mb-8">
                 <div className="w-32 h-32 rounded-full overflow-hidden">
@@ -19,40 +19,23 @@ export default function Home() {
 
             {/* Name */}
             <div className="mb-8">
-                <h1 className="text-3xl font-medium mb-4">Chetan Goenka</h1>
+                <h1 className="text-3xl font-semibold mb-4">Hi! I'm Chetan.</h1>
                 <p className="text-gray-600 leading-relaxed">
-                    HCI researcher and masters student at UC Berkeley, exploring the intersection of
-                    human behavior and technology design. Currently investigating [specific research area]
-                    to create more intuitive and accessible digital experiences.
+                    I'm an HCI researcher and EECS M.S. student at UC Berkeley, exploring how human behavior and technology design intersect through machine learning and AI. I'm passionate about creating solutions that address real-world challenges and enhance human-computer interactions.
                 </p>
-            </div>
-
-            {/* Navigation Links */}
-            <div className="mb-12">
-                <div className="flex flex-col gap-2">
-                    <Link
-                        href="/research"
-                        className="text-gray-600 hover:text-black transition-colors"
-                    >
-                        Research
-                    </Link>
-                    <Link
-                        href="/thoughts"
-                        className="text-gray-600 hover:text-black transition-colors"
-                    >
-                        Thoughts
-                    </Link>
-                </div>
+                <p className="text-gray-600 leading-relaxed mt-4">
+                    Currently investigating how AI coding tools can be designed to better serve both professional developers and programming beginners, focusing on creating more intuitive, personalized, and effective coding experiences.
+                </p>
             </div>
 
             {/* Contact Links */}
             <div className="mb-12">
                 <div className="flex flex-col gap-2">
                     <a
-                        href="mailto:your.email@berkeley.edu"
+                        href="mailto:cgoenka@berkeley.edu"
                         className="text-gray-600 hover:text-black transition-colors"
                     >
-                        your.email@berkeley.edu
+                        cgoenka[at]berkeley[dot]edu
                     </a>
                     <a
                         href="https://linkedin.com/in/yourprofile"
@@ -70,6 +53,24 @@ export default function Home() {
                     >
                         GitHub
                     </a>
+                </div>
+            </div>
+
+            {/* Navigation Links */}
+            <div className="mb-12">
+                <div className="flex flex-col gap-2">
+                    <Link
+                        href="/research"
+                        className="text-gray-600 hover:text-black transition-colors"
+                    >
+                        Research
+                    </Link>
+                    <Link
+                        href="/thoughts"
+                        className="text-gray-600 hover:text-black transition-colors"
+                    >
+                        Thoughts
+                    </Link>
                 </div>
             </div>
 
