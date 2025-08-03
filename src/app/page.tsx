@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ExternalLink } from "lucide-react";
-import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { LuLinkedin, LuGithub } from "react-icons/lu";
 
 export default function Home() {
     return (
@@ -44,7 +44,7 @@ export default function Home() {
                             rel="noopener noreferrer"
                             className="text-gray-600 hover:text-black transition-colors flex items-center gap-2"
                         >
-                            <FaLinkedin size={18} />
+                            <LuLinkedin size={18} />
                             LinkedIn
                         </a>
                         <a
@@ -53,7 +53,7 @@ export default function Home() {
                             rel="noopener noreferrer"
                             className="text-gray-600 hover:text-black transition-colors flex items-center gap-2"
                         >
-                            <FaGithub size={18} />
+                            <LuGithub size={18} />
                             GitHub
                         </a>
                     </div>
@@ -84,7 +84,7 @@ export default function Home() {
             {/* Terminal Hint */}
             <div>
                 <button
-                    className="text-gray-400 hover:text-gray-600 transition-colors text-sm font-mono"
+                    className="text-gray-500 hover:text-gray-700 transition-colors text-sm font-mono"
                     title="Enter the lab"
                 >
                     &gt;_
