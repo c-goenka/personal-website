@@ -1,8 +1,8 @@
-import Link from "next/link";
-import { LuArrowLeft, LuClock, LuFileText, LuCalendar } from "react-icons/lu";
+import { LuClock, LuFileText, LuCalendar } from "react-icons/lu";
 import { notFound } from "next/navigation";
 import { getThought, getAllThoughts, formatDate } from "../../../data/thoughts";
 import { MarkdownContent } from "../../../components/MarkdownContent";
+import { Breadcrumb } from "../../../components/Breadcrumb";
 
 interface PageProps {
     params: {
@@ -17,18 +17,16 @@ export default function ThoughtPage({ params }: PageProps) {
         notFound();
     }
 
+    const breadcrumbItems = [
+        { label: "Home", href: "/" },
+        { label: "Thoughts", href: "/thoughts" },
+        { label: thought.title, href: `/thoughts/${thought.id}` }
+    ];
+
     return (
         <div className="max-w-3xl mx-auto px-8 py-20">
-            {/* Back to Thoughts */}
-            <div className="mb-8">
-                <Link
-                    href="/thoughts"
-                    className="text-muted hover:text-muted-hover transition-colors text-sm flex items-center gap-2"
-                >
-                    <LuArrowLeft size={16} />
-                    Back to Thoughts
-                </Link>
-            </div>
+            {/* Breadcrumb Navigation */}
+            <Breadcrumb items={breadcrumbItems} />
 
             {/* Article Header */}
             <article>

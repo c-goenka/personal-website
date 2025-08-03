@@ -1,22 +1,20 @@
 import Link from "next/link";
-import { LuArrowLeft, LuClock, LuFileText } from "react-icons/lu";
+import { LuClock, LuFileText } from "react-icons/lu";
 import { getAllThoughts, formatDate } from "../../data/thoughts";
+import { Breadcrumb } from "../../components/Breadcrumb";
 
 export default function Thoughts() {
     const thoughts = getAllThoughts();
+    
+    const breadcrumbItems = [
+        { label: "Home", href: "/" },
+        { label: "Thoughts", href: "/thoughts" }
+    ];
 
     return (
         <div className="max-w-3xl mx-auto px-8 py-20">
-            {/* Back to Home */}
-            <div className="mb-8">
-                <Link
-                    href="/"
-                    className="text-muted hover:text-muted-hover transition-colors text-sm flex items-center gap-2"
-                >
-                    <LuArrowLeft size={16} />
-                    Back to Home
-                </Link>
-            </div>
+            {/* Breadcrumb Navigation */}
+            <Breadcrumb items={breadcrumbItems} />
 
             <h1 className="text-3xl font-semibold mb-8">Thoughts</h1>
 
