@@ -27,7 +27,7 @@ export default function Home() {
                     Currently investigating how AI coding tools can be designed to better serve both professional developers and programming beginners, focusing on creating more intuitive, personalized, and effective coding experiences.
                 </p>
                 <p className="text-gray-600 leading-relaxed mt-4">
-                    I am interested in science, philosophy, design, and programming tools. If you're interested in collaborating, or just want to chat, feel free to reach out at <a href="mailto:cgoenka@berkeley.edu" className="underline decoration-wavy underline-offset-4 hover:text-black transition-colors">cgoenka[at]berkeley[dot]edu</a>
+                    I am interested in science, philosophy, design, and programming tools. If you're interested in collaborating, or just want to chat, feel free to reach out at <a href="mailto:cgoenka@berkeley.edu" className="underline decoration-wavy underline-offset-4 hover:text-black transition-colors">cgoenka@berkeley.edu</a>
                 </p>
             </div>
 
