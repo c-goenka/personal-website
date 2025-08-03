@@ -29,7 +29,7 @@ export default function Home() {
                     Currently investigating how AI coding tools can be designed to better serve both professional developers and programming beginners, focusing on creating more intuitive, personalized, and effective coding experiences.
                 </p>
                 <p className="text-gray-600 leading-relaxed mt-4">
-                    I am interested in science, philosophy, design, and programming tools. If you&apos;re interested in collaborating, or just want to chat, feel free to reach out at <a href="mailto:cgoenka@berkeley.edu" className="underline decoration-wavy underline-offset-4 hover:text-black transition-colors">cgoenka@berkeley.edu</a>
+                    I am interested in science, philosophy, design, and programming tools. If you&apos;re interested in collaborating, or just want to chat, feel free to reach out at <a href="mailto:cgoenka@berkeley.edu" className="underline decoration-wavy underline-offset-4 decoration-gray-400 hover:text-black transition-colors">cgoenka@berkeley.edu</a>
                 </p>
             </div>
 
@@ -82,7 +82,7 @@ export default function Home() {
             </div>
 
             {/* Terminal Hint */}
-            <div>
+            <div className="-mt-4">
                 <button
                     className="text-gray-500 hover:text-gray-700 transition-colors text-sm font-mono"
                     title="Enter the lab"
