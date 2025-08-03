@@ -1,4 +1,4 @@
-import { LuClock, LuFileText, LuCalendar } from "react-icons/lu";
+import { LuCalendar } from "react-icons/lu";
 import { notFound } from "next/navigation";
 import { getThought, getAllThoughts, formatDate } from "../../../data/thoughts";
 import { MarkdownContent } from "../../../components/MarkdownContent";
@@ -31,27 +31,20 @@ export default function ThoughtPage({ params }: PageProps) {
             {/* Article Header */}
             <article>
                 <header className="mb-8">
-                    <h1 className="text-3xl font-semibold mb-4">{thought.title}</h1>
+                    <div className="flex items-center gap-3 mb-4">
+                        <span className="text-3xl">{thought.emoji}</span>
+                        <h1 className="text-3xl font-semibold">{thought.title}</h1>
+                    </div>
 
-                    {/* Metadata */}
-                    <div className="flex items-center gap-4 text-sm text-muted mb-8">
-                        <span className="flex items-center gap-1">
-                            <LuCalendar size={14} />
-                            {formatDate(thought.date)}
-                        </span>
-                        <span className="flex items-center gap-1">
-                            <LuClock size={14} />
-                            {thought.readingTime}
-                        </span>
-                        <span className="flex items-center gap-1">
-                            <LuFileText size={14} />
-                            {thought.wordCount}
-                        </span>
+                    {/* Date only */}
+                    <div className="flex items-center gap-1 text-sm text-muted mb-8">
+                        <LuCalendar size={14} />
+                        {formatDate(thought.date)}
                     </div>
                 </header>
 
                 {/* Article Content */}
-                <MarkdownContent content={thought.content} showTOC={true} />
+                <MarkdownContent content={thought.content} />
             </article>
         </div>
     );

@@ -1,9 +1,8 @@
 export interface Thought {
     id: string;
+    emoji: string;
     title: string;
     date: string;
-    readingTime: string;
-    wordCount: string;
     preview: string;
     content: string;
 }
@@ -11,11 +10,10 @@ export interface Thought {
 export const thoughts: Thought[] = [
     {
         id: "sample-thought",
+        emoji: "💭",
         title: "Lorem Ipsum Dolor Sit Amet",
         date: "2024-08-01",
-        readingTime: "5 min read",
-        wordCount: "1,200 words",
-        preview: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        preview: "Lorem ipsum dolor sit amet, brief thought preview.",
         content: `# Lorem Ipsum Dolor Sit Amet
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
