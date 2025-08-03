@@ -31,43 +31,47 @@ export default function Home() {
                 </p>
             </div>
 
-            {/* Contact Links */}
+            {/* Links Section */}
             <div className="mb-12">
-                <div className="flex flex-col gap-2">
-                    <a
-                        href="https://linkedin.com/in/yourprofile"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-gray-600 hover:text-black transition-colors"
-                    >
-                        LinkedIn
-                    </a>
-                    <a
-                        href="https://github.com/yourusername"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-gray-600 hover:text-black transition-colors"
-                    >
-                        GitHub
-                    </a>
-                </div>
-            </div>
+                <div className="flex gap-6">
+                    {/* Contact Links */}
+                    <div className="flex flex-col gap-2">
+                        <a
+                            href="https://linkedin.com/in/cgoenka"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-gray-600 hover:text-black transition-colors"
+                        >
+                            LinkedIn
+                        </a>
+                        <a
+                            href="https://github.com/c-goenka"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-gray-600 hover:text-black transition-colors"
+                        >
+                            GitHub
+                        </a>
+                    </div>
 
-            {/* Navigation Links */}
-            <div className="mb-12">
-                <div className="flex flex-col gap-2">
-                    <Link
-                        href="/research"
-                        className="text-gray-600 hover:text-black transition-colors"
-                    >
-                        Research
-                    </Link>
-                    <Link
-                        href="/thoughts"
-                        className="text-gray-600 hover:text-black transition-colors"
-                    >
-                        Thoughts
-                    </Link>
+                    {/* Divider */}
+                    <div className="border-l border-gray-400 h-15"></div>
+
+                    {/* Navigation Links */}
+                    <div className="flex flex-col gap-2">
+                        <Link
+                            href="/research"
+                            className="text-gray-600 hover:text-black transition-colors"
+                        >
+                            Research
+                        </Link>
+                        <Link
+                            href="/thoughts"
+                            className="text-gray-600 hover:text-black transition-colors"
+                        >
+                            Thoughts
+                        </Link>
+                    </div>
                 </div>
             </div>
 
