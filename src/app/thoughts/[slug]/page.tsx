@@ -5,13 +5,14 @@ import { MarkdownContent } from "../../../components/MarkdownContent";
 import { Breadcrumb } from "../../../components/Breadcrumb";
 
 interface PageProps {
-    params: {
+    params: Promise<{
         slug: string;
-    };
+    }>;
 }
 
-export default function ThoughtPage({ params }: PageProps) {
-    const thought = getThought(params.slug);
+export default async function ThoughtPage({ params }: PageProps) {
+    const { slug } = await params;
+    const thought = getThought(slug);
 
     if (!thought) {
         notFound();
@@ -52,7 +53,8 @@ export default function ThoughtPage({ params }: PageProps) {
 
 // Generate metadata for the page
 export async function generateMetadata({ params }: PageProps) {
-    const thought = getThought(params.slug);
+    const { slug } = await params;
+    const thought = getThought(slug);
 
     if (!thought) {
         return {
