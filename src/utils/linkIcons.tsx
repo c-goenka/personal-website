@@ -7,6 +7,7 @@ const LINK_ICONS = {
     'code': LuCode,
     'demo': LuGlobe,
     'website': LuGlobe,
+    'poster': LuPresentation,
     // Project links
     'github': LuCode,
     'documentation': LuFileText,

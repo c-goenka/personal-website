@@ -10,6 +10,7 @@ export interface ResearchProject {
         code?: string;
         demo?: string;
         website?: string;
+        poster?: string
     };
 }
 
@@ -40,7 +41,7 @@ export const researchProjects: ResearchProject[] = [
         status: "presented",
         venue: "Jacobs Design Showcase 2024",
         links: {
-            pdf: "/images/pail-poster.png",
+            poster: "/images/pail-poster.png",
         }
     },
     {
