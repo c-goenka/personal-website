@@ -51,7 +51,7 @@ export default function ThoughtPage({ params }: PageProps) {
 }
 
 // Generate metadata for the page
-export async function generateMetadata({ params }: PageProps) {
+export async function generateMetadata({ params }: { params: { slug: string } }) {
     const thought = getThought(params.slug);
 
     if (!thought) {
