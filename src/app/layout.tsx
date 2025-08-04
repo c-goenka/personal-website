@@ -10,8 +10,23 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-    title: "Chetan's Website",
-    description: "HCI researcher and masters student at UC Berkeley",
+    title: "Chetan Goenka - HCI Researcher & EECS Student",
+    description: "HCI researcher and EECS M.S. student at UC Berkeley exploring human-computer interaction, AI-assisted programming, and technology design.",
+    keywords: "HCI, human-computer interaction, AI, programming, UC Berkeley, research, technology design",
+    authors: [{ name: "Chetan Goenka" }],
+    creator: "Chetan Goenka",
+    openGraph: {
+        title: "Chetan Goenka - HCI Researcher & EECS Student",
+        description: "HCI researcher and EECS M.S. student at UC Berkeley exploring human-computer interaction, AI-assisted programming, and technology design.",
+        url: "https://cgoenka.me",
+        siteName: "Chetan Goenka",
+        type: "website",
+    },
+    twitter: {
+        card: "summary",
+        title: "Chetan Goenka - HCI Researcher & EECS Student",
+        description: "HCI researcher and EECS M.S. student at UC Berkeley exploring human-computer interaction, AI-assisted programming, and technology design.",
+    },
 };
 
 export default function RootLayout({

@@ -43,6 +43,7 @@ export default function Home() {
                             href="https://linkedin.com/in/cgoenka"
                             target="_blank"
                             rel="noopener noreferrer"
+                            aria-label="Visit Chetan's LinkedIn profile"
                             className="text-muted hover:text-muted-hover transition-colors flex items-center gap-2"
                         >
                             <LuLinkedin size={18} />
@@ -52,6 +53,7 @@ export default function Home() {
                             href="https://github.com/c-goenka"
                             target="_blank"
                             rel="noopener noreferrer"
+                            aria-label="Visit Chetan's GitHub profile"
                             className="text-muted hover:text-muted-hover transition-colors flex items-center gap-2"
                         >
                             <LuGithub size={18} />
@@ -61,6 +63,7 @@ export default function Home() {
                             href="/chetan-goenka-resume.pdf"
                             target="_blank"
                             rel="noopener noreferrer"
+                            aria-label="Download Chetan's resume (PDF)"
                             className="text-muted hover:text-muted-hover transition-colors flex items-center gap-2"
                         >
                             <LuFileUser size={18} />

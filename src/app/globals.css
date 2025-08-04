@@ -35,3 +35,20 @@ body {
     color: var(--foreground);
     transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+/* Enhanced focus states for better keyboard navigation */
+*:focus-visible {
+    outline: 2px solid var(--muted-hover);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
