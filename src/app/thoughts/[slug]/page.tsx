@@ -4,11 +4,11 @@ import { getThought, getAllThoughts, formatDate } from "../../../data/thoughts";
 import { MarkdownContent } from "../../../components/MarkdownContent";
 import { Breadcrumb } from "../../../components/Breadcrumb";
 
-interface ThoughtPageProps {
+export default function ThoughtPage({
+    params,
+}: {
     params: { slug: string };
-}
-
-export default function ThoughtPage({ params }: ThoughtPageProps) {
+}) {
     const thought = getThought(params.slug);
 
     if (!thought) {
@@ -18,7 +18,7 @@ export default function ThoughtPage({ params }: ThoughtPageProps) {
     const breadcrumbItems = [
         { label: "Home", href: "/" },
         { label: "Thoughts", href: "/thoughts" },
-        { label: thought.title, href: `/thoughts/${thought.id}` }
+        { label: thought.title, href: `/thoughts/${thought.id}` },
     ];
 
     return (
@@ -49,9 +49,7 @@ export async function generateMetadata({
     const thought = getThought(params.slug);
 
     if (!thought) {
-        return {
-            title: "Thought Not Found",
-        };
+        return { title: "Thought Not Found" };
     }
 
     return {
