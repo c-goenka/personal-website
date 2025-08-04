@@ -19,7 +19,18 @@ export default function Projects() {
             <Breadcrumb items={breadcrumbItems} />
 
             <h1 className="text-3xl font-semibold mb-2">Projects</h1>
-            <p className="text-muted mb-12">A collection of software, hardware, design, and research work.</p>
+            <p className="text-muted mb-6">A collection of software, hardware, design, and research work.</p>
+            
+            {/* Under Construction Notice */}
+            <div className="mb-8 p-4 bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg">
+                <div className="flex items-center gap-2 mb-2">
+                    <span className="text-yellow-600 dark:text-yellow-400">🚧</span>
+                    <h3 className="font-medium text-yellow-800 dark:text-yellow-200">Under Construction</h3>
+                </div>
+                <p className="text-sm text-yellow-700 dark:text-yellow-300">
+                    This page contains placeholder content. Real projects and portfolio pieces will be added soon.
+                </p>
+            </div>
             
             {/* Projects */}
             <div className="space-y-6">
