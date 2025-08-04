@@ -1,11 +1,12 @@
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import { memo } from 'react';
 
 interface MarkdownContentProps {
     content: string;
 }
 
-export function MarkdownContent({ content }: MarkdownContentProps) {
+export const MarkdownContent = memo(function MarkdownContent({ content }: MarkdownContentProps) {
     return (
         <div className="prose prose-stone max-w-none dark:prose-invert">
             <ReactMarkdown 
@@ -31,4 +32,4 @@ export function MarkdownContent({ content }: MarkdownContentProps) {
                 </ReactMarkdown>
         </div>
     );
-}
+});

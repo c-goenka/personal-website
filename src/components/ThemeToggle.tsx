@@ -1,10 +1,10 @@
 'use client';
 
 import { useTheme } from 'next-themes';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, memo } from 'react';
 import { LuSun, LuMoon } from "react-icons/lu";
 
-export function ThemeToggle() {
+export const ThemeToggle = memo(function ThemeToggle() {
     const { theme, setTheme } = useTheme();
     const [mounted, setMounted] = useState(false);
 
@@ -29,4 +29,4 @@ export function ThemeToggle() {
         )}
         </button>
     );
-}
+});

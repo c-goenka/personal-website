@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { memo } from "react";
 import { LuChevronRight } from "react-icons/lu";
 
 interface BreadcrumbItem {
@@ -10,7 +11,7 @@ interface BreadcrumbProps {
     items: BreadcrumbItem[];
 }
 
-export function Breadcrumb({ items }: BreadcrumbProps) {
+export const Breadcrumb = memo(function Breadcrumb({ items }: BreadcrumbProps) {
     return (
         <nav className="mb-8">
             <div className="flex items-center gap-2 text-sm">
@@ -34,4 +35,4 @@ export function Breadcrumb({ items }: BreadcrumbProps) {
             </div>
         </nav>
     );
-}
+});
