@@ -1,22 +1,22 @@
 import Link from "next/link";
 import { getAllProjects, formatDate } from "@/data/projects";
-import { Breadcrumb } from "@/components/Breadcrumb";
 import { getStatusLabel, getStatusColor, getTypeLabel, getTypeColor, getCategoryLabel, getCategoryColor } from "@/utils/badges";
 import { getLinkIcon, getLinkLabel } from "@/utils/linkIcons";
+import { LuArrowLeft } from "react-icons/lu";
 
 export default function Projects() {
     const projects = getAllProjects();
-    
-    const breadcrumbItems = [
-        { label: "Home", href: "/" },
-        { label: "Projects", href: "/projects" }
-    ];
-
 
     return (
         <div className="max-w-3xl mx-auto px-8 py-20">
-            {/* Breadcrumb Navigation */}
-            <Breadcrumb items={breadcrumbItems} />
+            {/* Back to Home */}
+            <Link 
+                href="/" 
+                className="inline-flex items-center gap-2 text-muted hover:text-muted-hover transition-colors mb-8"
+            >
+                <LuArrowLeft size={16} />
+                Back to Home
+            </Link>
 
             <h1 className="text-3xl font-semibold mb-2">Projects</h1>
             <p className="text-muted mb-6">A collection of software, hardware, design, and research work.</p>

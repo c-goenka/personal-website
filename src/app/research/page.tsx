@@ -1,22 +1,22 @@
 import Link from "next/link";
 import { getAllResearchProjects } from "@/data/research";
-import { Breadcrumb } from "@/components/Breadcrumb";
 import { getStatusLabel, getStatusColor } from "@/utils/badges";
 import { getLinkIcon, getLinkLabel } from "@/utils/linkIcons";
+import { LuArrowLeft } from "react-icons/lu";
 
 export default function Research() {
     const projects = getAllResearchProjects();
 
-    const breadcrumbItems = [
-        { label: "Home", href: "/" },
-        { label: "Research", href: "/research" }
-    ];
-
-
     return (
         <div className="max-w-3xl mx-auto px-8 py-20">
-            {/* Breadcrumb Navigation */}
-            <Breadcrumb items={breadcrumbItems} />
+            {/* Back to Home */}
+            <Link 
+                href="/" 
+                className="inline-flex items-center gap-2 text-muted hover:text-muted-hover transition-colors mb-8"
+            >
+                <LuArrowLeft size={16} />
+                Back to Home
+            </Link>
 
             <h1 className="text-3xl font-semibold mb-2">Research</h1>
             <p className="text-muted mb-6">Exploring human-computer interaction and AI-assisted programming.</p>
