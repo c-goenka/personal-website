@@ -87,13 +87,6 @@ export default function Home() {
                             <LuLink size={16} />
                             Projects
                         </Link>
-                        <Link
-                            href="/thoughts"
-                            className="text-muted hover:text-muted-hover transition-colors flex items-center gap-2"
-                        >
-                            <LuLink size={16} />
-                            Thoughts
-                        </Link>
                     </div>
                 </div>
             </div>
