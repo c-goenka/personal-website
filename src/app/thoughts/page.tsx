@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { getAllThoughts, formatDate } from "../../data/thoughts";
-import { Breadcrumb } from "../../components/Breadcrumb";
+import { getAllThoughts, formatDate } from "@/data/thoughts";
+import { Breadcrumb } from "@/components/Breadcrumb";
 
 export default function Thoughts() {
     const thoughts = getAllThoughts();

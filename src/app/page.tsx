@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { LuLinkedin, LuGithub, LuLink, LuFileUser } from "react-icons/lu";
-import { ThemeToggle } from "../../components/ThemeToggle";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 export default function Home() {
     return (

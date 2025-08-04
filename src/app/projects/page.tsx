@@ -1,7 +1,8 @@
 import Link from "next/link";
-import { LuExternalLink, LuFileText, LuCode, LuGlobe, LuPresentation, LuImage } from "react-icons/lu";
-import { getAllProjects, getStatusLabel, getStatusColor, getTypeLabel, getTypeColor, getCategoryLabel, getCategoryColor, formatDate } from "../../data/projects";
-import { Breadcrumb } from "../../components/Breadcrumb";
+import { getAllProjects, formatDate } from "@/data/projects";
+import { Breadcrumb } from "@/components/Breadcrumb";
+import { getStatusLabel, getStatusColor, getTypeLabel, getTypeColor, getCategoryLabel, getCategoryColor } from "@/utils/badges";
+import { getLinkIcon, getLinkLabel } from "@/utils/linkIcons";
 
 export default function Projects() {
     const projects = getAllProjects();
@@ -11,42 +12,6 @@ export default function Projects() {
         { label: "Projects", href: "/projects" }
     ];
 
-    const getLinkIcon = (type: string) => {
-        switch (type) {
-            case 'github':
-                return <LuCode size={14} />;
-            case 'demo':
-            case 'website':
-                return <LuGlobe size={14} />;
-            case 'documentation':
-                return <LuFileText size={14} />;
-            case 'presentation':
-                return <LuPresentation size={14} />;
-            case 'portfolio':
-                return <LuImage size={14} />;
-            default:
-                return <LuExternalLink size={14} />;
-        }
-    };
-
-    const getLinkLabel = (type: string) => {
-        switch (type) {
-            case 'github':
-                return 'GitHub';
-            case 'demo':
-                return 'Demo';
-            case 'website':
-                return 'Website';
-            case 'documentation':
-                return 'Docs';
-            case 'presentation':
-                return 'Slides';
-            case 'portfolio':
-                return 'Portfolio';
-            default:
-                return type.charAt(0).toUpperCase() + type.slice(1);
-        }
-    };
 
     return (
         <div className="max-w-3xl mx-auto px-8 py-20">

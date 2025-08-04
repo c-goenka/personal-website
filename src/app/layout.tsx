@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
 import "./globals.css";
-import Layout from "../../components/Layout";
-import { ThemeProvider } from "../../components/ThemeProvider";
+import Layout from "@/components/Layout";
+import { ThemeProvider } from "@/components/ThemeProvider";
 
 const dmSans = DM_Sans({
     subsets: ["latin"],

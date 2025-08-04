@@ -1,7 +1,8 @@
 import Link from "next/link";
-import { LuExternalLink, LuFileText, LuCode, LuGlobe } from "react-icons/lu";
-import { getAllResearchProjects, getStatusLabel, getStatusColor } from "../../data/research";
-import { Breadcrumb } from "../../components/Breadcrumb";
+import { getAllResearchProjects } from "@/data/research";
+import { Breadcrumb } from "@/components/Breadcrumb";
+import { getStatusLabel, getStatusColor } from "@/utils/badges";
+import { getLinkIcon, getLinkLabel } from "@/utils/linkIcons";
 
 export default function Research() {
     const projects = getAllResearchProjects();
@@ -11,19 +12,6 @@ export default function Research() {
         { label: "Research", href: "/research" }
     ];
 
-    const getLinkIcon = (type: string) => {
-        switch (type) {
-            case 'pdf':
-                return <LuFileText size={14} />;
-            case 'code':
-                return <LuCode size={14} />;
-            case 'demo':
-            case 'website':
-                return <LuGlobe size={14} />;
-            default:
-                return <LuExternalLink size={14} />;
-        }
-    };
 
     return (
         <div className="max-w-3xl mx-auto px-8 py-20">
@@ -77,7 +65,7 @@ export default function Research() {
                                         className="flex items-center gap-1 text-muted hover:text-muted-hover transition-colors"
                                     >
                                         {getLinkIcon(type)}
-                                        {type.charAt(0).toUpperCase() + type.slice(1)}
+                                        {getLinkLabel(type)}
                                     </Link>
                                 )
                             ))}

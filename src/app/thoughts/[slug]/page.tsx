@@ -1,8 +1,8 @@
 import { LuCalendar } from "react-icons/lu";
 import { notFound } from "next/navigation";
-import { getThought, getAllThoughts, formatDate } from "../../../data/thoughts";
-import { MarkdownContent } from "../../../components/MarkdownContent";
-import { Breadcrumb } from "../../../components/Breadcrumb";
+import { getThought, getAllThoughts, formatDate } from "@/data/thoughts";
+import { MarkdownContent } from "@/components/MarkdownContent";
+import { Breadcrumb } from "@/components/Breadcrumb";
 
 interface PageProps {
     params: Promise<{
