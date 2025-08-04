@@ -5,6 +5,7 @@ const STATUS_LABELS = {
     // Research statuses
     'published': 'PUBLISHED',
     'submitted': 'SUBMITTED',
+    'presented': 'PRESENTED',
     'in-progress': 'IN PROGRESS',
     // Project statuses  
     'active': 'ACTIVE',
@@ -16,6 +17,7 @@ const STATUS_COLORS = {
     // Research statuses
     'published': 'bg-green-100 text-green-800 dark:bg-green-900/20 dark:text-green-400',
     'submitted': 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900/20 dark:text-yellow-400',
+    'presented': 'bg-purple-100 text-purple-800 dark:bg-purple-900/20 dark:text-purple-400',
     'in-progress': 'bg-blue-100 text-blue-800 dark:bg-blue-900/20 dark:text-blue-400',
     // Project statuses
     'active': 'bg-blue-100 text-blue-800 dark:bg-blue-900/20 dark:text-blue-400',
