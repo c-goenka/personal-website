@@ -6,7 +6,7 @@ import { getLinkIcon, getLinkLabel } from "@/utils/linkIcons";
 
 export default function Research() {
     const projects = getAllResearchProjects();
-    
+
     const breadcrumbItems = [
         { label: "Home", href: "/" },
         { label: "Research", href: "/research" }
@@ -20,18 +20,7 @@ export default function Research() {
 
             <h1 className="text-3xl font-semibold mb-2">Research</h1>
             <p className="text-muted mb-6">Exploring human-computer interaction and AI-assisted programming.</p>
-            
-            {/* Under Construction Notice */}
-            <div className="mb-8 p-4 bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg">
-                <div className="flex items-center gap-2 mb-2">
-                    <span className="text-yellow-600 dark:text-yellow-400">🚧</span>
-                    <h3 className="font-medium text-yellow-800 dark:text-yellow-200">Under Construction</h3>
-                </div>
-                <p className="text-sm text-yellow-700 dark:text-yellow-300">
-                    This page contains placeholder content. Real research projects and publications will be added soon.
-                </p>
-            </div>
-            
+
             {/* Research Projects */}
             <div className="space-y-6">
                 {projects.map((project) => (
@@ -42,17 +31,17 @@ export default function Research() {
                                 {getStatusLabel(project.status)}
                             </span>
                         </div>
-                        
+
                         {/* Title */}
                         <h2 className="text-xl font-semibold mb-3 text-foreground">
                             {project.title}
                         </h2>
-                        
+
                         {/* Description */}
                         <p className="text-muted leading-relaxed mb-4">
                             {project.description}
                         </p>
-                        
+
                         {/* Venue and Links */}
                         <div className="flex items-center gap-4 text-sm">
                             {/* Venue Info */}
@@ -64,7 +53,7 @@ export default function Research() {
                             {project.year && !project.venue && (
                                 <span className="text-muted">{project.year}</span>
                             )}
-                            
+
                             {/* Links */}
                             {Object.entries(project.links).map(([type, url]) => (
                                 url && (
