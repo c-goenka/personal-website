@@ -97,16 +97,6 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-
-            {/* Terminal Hint */}
-            <div className="-mt-4">
-                <button
-                    className="text-muted hover:text-muted-hover transition-colors text-sm font-mono"
-                    title="Enter the lab"
-                >
-                    &gt;_
-                </button>
-            </div>
         </div>
     );
 }
