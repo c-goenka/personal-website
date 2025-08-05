@@ -10,8 +10,8 @@ export default function Projects() {
     return (
         <div className="max-w-3xl mx-auto px-8 py-20">
             {/* Back to Home */}
-            <Link 
-                href="/" 
+            <Link
+                href="/"
                 className="inline-flex items-center gap-2 text-muted hover:text-muted-hover transition-colors mb-8"
             >
                 <LuArrowLeft size={16} />
@@ -20,7 +20,7 @@ export default function Projects() {
 
             <h1 className="text-3xl font-semibold mb-2">Projects</h1>
             <p className="text-muted mb-6">A collection of software, hardware, design, and research work.</p>
-            
+
             {/* Under Construction Notice */}
             <div className="mb-8 p-4 bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg">
                 <div className="flex items-center gap-2 mb-2">
@@ -31,11 +31,11 @@ export default function Projects() {
                     This page contains placeholder content. Real projects and portfolio pieces will be added soon.
                 </p>
             </div>
-            
+
             {/* Projects */}
             <div className="space-y-6">
                 {projects.map((project) => (
-                    <div key={project.id} className="border border-border rounded-lg p-6 hover:border-muted hover:bg-muted/5 transition-all duration-200">
+                    <div key={project.id} className="border border-border rounded-lg p-6 hover:border-muted transition-all duration-200">
                         {/* Badges */}
                         <div className="flex items-start gap-2 mb-3 flex-wrap">
                             <span className={`px-2 py-1 text-xs font-medium rounded-md ${getStatusColor(project.status)}`}>
@@ -48,17 +48,17 @@ export default function Projects() {
                                 {getCategoryLabel(project.category)}
                             </span>
                         </div>
-                        
+
                         {/* Title */}
                         <h2 className="text-xl font-semibold mb-3 text-foreground">
                             {project.title}
                         </h2>
-                        
+
                         {/* Description */}
                         <p className="text-muted leading-relaxed mb-4">
                             {project.description}
                         </p>
-                        
+
                         {/* Technologies */}
                         <div className="flex flex-wrap gap-2 mb-4">
                             {project.technologies.map((tech) => (
@@ -70,14 +70,14 @@ export default function Projects() {
                                 </span>
                             ))}
                         </div>
-                        
+
                         {/* Date and Links */}
                         <div className="flex items-center gap-4 text-sm flex-wrap">
                             {/* Date */}
                             <span className="text-muted">
                                 {formatDate(project.date)}
                             </span>
-                            
+
                             {/* Links */}
                             {Object.entries(project.links).map(([type, url]) => (
                                 url && (

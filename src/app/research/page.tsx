@@ -10,8 +10,8 @@ export default function Research() {
     return (
         <div className="max-w-3xl mx-auto px-8 py-20">
             {/* Back to Home */}
-            <Link 
-                href="/" 
+            <Link
+                href="/"
                 className="inline-flex items-center gap-2 text-muted hover:text-muted-hover transition-colors mb-8"
             >
                 <LuArrowLeft size={16} />
@@ -24,7 +24,7 @@ export default function Research() {
             {/* Research Projects */}
             <div className="space-y-6">
                 {projects.map((project) => (
-                    <div key={project.id} className="border border-border rounded-lg p-6 hover:border-muted hover:bg-muted/5 transition-all duration-200">
+                    <div key={project.id} className="border border-border rounded-lg p-6 hover:border-muted transition-all duration-200">
                         {/* Status Badge and Title */}
                         <div className="flex items-start gap-3 mb-3">
                             <span className={`px-2 py-1 text-xs font-medium rounded-md ${getStatusColor(project.status)}`}>
