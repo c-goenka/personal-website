@@ -7,6 +7,7 @@ export interface Project {
     links: {
         github?: string;
         demo?: string;
+        paper?: string;
         documentation?: string;
         presentation?: string;
         portfolio?: string;
@@ -35,6 +36,17 @@ export const projects: Project[] = [
         links: {
             github: "https://github.com/c-goenka/personal-website",
             website: "https://cgoenka.me"
+        }
+    },
+    {
+        id: "code-compass",
+        title: "Code Compass",
+        description: "VS Code extension that provides a framework to connect documentation, the debugging ticket description and the relevant functions/code snippets of the project.",
+        technologies: ["TypeScript", "Python", "Flask", "PyTorch", "OpenCV"],
+        date: "2024-05",
+        links: {
+            github: "https://github.com/Acumane/code-compass",
+            paper: "/papers/code-compass.pdf",
         }
     },
 ];

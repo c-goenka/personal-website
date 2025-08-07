@@ -10,6 +10,7 @@ const LINK_ICONS = {
     'poster': LuPresentation,
     // Project links
     'github': LuCode,
+    'paper': LuFileText,
     'documentation': LuFileText,
     'presentation': LuPresentation,
     'portfolio': LuImage,
@@ -21,6 +22,7 @@ const LINK_LABELS = {
     'demo': 'Demo',
     'website': 'Website',
     'pdf': 'PDF',
+    'paper' : 'Paper',
     'code': 'Code',
     'documentation': 'Docs',
     'presentation': 'Slides',
