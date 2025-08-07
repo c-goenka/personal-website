@@ -20,67 +20,32 @@ export const projects: Project[] = [
         title: "Board Wizard",
         description: "AI-powered board game companion that helps players quickly find and understand rules without flipping through lengthy manuals",
         technologies: ["Python", "Streamlit", "LangChain", "OpenAI"],
-        date: "2024-08",
+        date: "2025-03",
         links: {
-            github: "https://github.com/username/lorem-web-app",
-            demo: "https://lorem-app.demo.com",
-            documentation: "/docs/lorem-web-app.pdf"
+            github: "https://github.com/c-goenka/board-wizard",
+            demo: "https://boardwizard.streamlit.app/",
         }
     },
     {
-        id: "consectetur-iot",
-        title: "Consectetur IoT Prototype",
-        description: "Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        technologies: ["Arduino", "Raspberry Pi", "Python", "3D Printing"],
-        date: "2024-07",
+        id: "personal-website",
+        title: "Personal Website",
+        description: "My personal portfolio website featuring a clean design and responsive layout to showcase my research and projects.",
+        technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Vercel"],
+        date: "2025-07",
         links: {
-            github: "https://github.com/username/consectetur-iot",
-            portfolio: "/portfolio/iot-prototype-photos.pdf",
-            documentation: "/docs/iot-prototype-report.pdf"
+            github: "https://github.com/c-goenka/personal-website",
+            website: "https://cgoenka.me"
         }
     },
-    {
-        id: "adipiscing-presentation",
-        title: "Adipiscing Research Presentation",
-        description: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-        technologies: ["Figma", "PowerPoint", "Data Visualization"],
-        date: "2024-06",
-        links: {
-            presentation: "/presentations/adipiscing-research.pdf",
-            demo: "https://adipiscing-demo.com"
-        }
-    },
-    {
-        id: "tempor-ml-model",
-        title: "Tempor Machine Learning Pipeline",
-        description: "Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        technologies: ["Python", "TensorFlow", "Pandas", "Docker"],
-        date: "2024-05",
-        links: {
-            github: "https://github.com/username/tempor-ml",
-            documentation: "/docs/ml-pipeline-report.pdf"
-        }
-    },
-    {
-        id: "dolore-ui-design",
-        title: "Dolore Mobile UI Design",
-        description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam.",
-        technologies: ["Figma", "Sketch", "Prototyping", "User Research"],
-        date: "2024-03",
-        links: {
-            portfolio: "/portfolio/mobile-ui-designs.pdf",
-            demo: "https://dolore-prototype.figma.com"
-        }
-    }
 ];
 
 export function getAllProjects(): Project[] {
     return projects.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 }
 
-
 export function formatDate(dateString: string): string {
-    return new Date(dateString).toLocaleDateString('en-US', {
+    const [year, month] = dateString.split('-');
+    return new Date(parseInt(year), parseInt(month) - 1).toLocaleDateString('en-US', {
         year: 'numeric',
         month: 'short'
     });
