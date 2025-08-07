@@ -36,19 +36,6 @@ export default function Projects() {
             <div className="space-y-6">
                 {projects.map((project) => (
                     <div key={project.id} className="border border-border rounded-lg p-6 hover:border-muted transition-all duration-200">
-                        {/* Badges */}
-                        <div className="flex items-start gap-2 mb-3 flex-wrap">
-                            <span className={`px-2 py-1 text-xs font-medium rounded-md ${getStatusColor(project.status)}`}>
-                                {getStatusLabel(project.status)}
-                            </span>
-                            <span className={`px-2 py-1 text-xs font-medium rounded-md ${getTypeColor(project.type)}`}>
-                                {getTypeLabel(project.type)}
-                            </span>
-                            <span className={`px-2 py-1 text-xs font-medium rounded-md ${getCategoryColor(project.category)}`}>
-                                {getCategoryLabel(project.category)}
-                            </span>
-                        </div>
-
                         {/* Title */}
                         <h2 className="text-xl font-semibold mb-3 text-foreground">
                             {project.title}
