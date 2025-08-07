@@ -27,7 +27,7 @@ export default function Projects() {
                     <h3 className="font-medium text-yellow-800 dark:text-yellow-200">Under Construction</h3>
                 </div>
                 <p className="text-sm text-yellow-700 dark:text-yellow-300">
-                    I've added a few of my projects here and will be adding more soon.
+                    I&apos;ve added a few of my projects here and will be adding more soon.
                 </p>
             </div>
 
