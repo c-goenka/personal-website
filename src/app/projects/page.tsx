@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { getAllProjects, formatDate } from "@/data/projects";
-import { getStatusLabel, getStatusColor, getTypeLabel, getTypeColor, getCategoryLabel, getCategoryColor } from "@/utils/badges";
+import { getStatusLabel, getStatusColor } from "@/utils/badges";
 import { getLinkIcon, getLinkLabel } from "@/utils/linkIcons";
 import { LuArrowLeft } from "react-icons/lu";
 
@@ -19,7 +19,7 @@ export default function Projects() {
             </Link>
 
             <h1 className="text-3xl font-semibold mb-2">Projects</h1>
-            <p className="text-muted mb-6">A collection of software, hardware, design, and research work.</p>
+            <p className="text-muted mb-6">A collection of my technical and creative projects.</p>
 
             {/* Under Construction Notice */}
             <div className="mb-8 p-4 bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg">
