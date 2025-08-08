@@ -24,7 +24,7 @@ export default function Home() {
             <div className="mb-8">
                 <h1 className="text-3xl font-semibold mb-4">Hi! I&apos;m Chetan.</h1>
                 <p className="text-muted leading-relaxed">
-                    I&apos;m an HCI researcher and EECS M.S. student at UC Berkeley, exploring how human behavior and technology design intersect through machine learning and AI. I&apos;m passionate about creating solutions that address real-world challenges and enhance human-computer interactions.
+                    I&apos;m an EECS M.S. student at UC Berkeley, exploring how human behavior and technology design intersect through machine learning and AI. I&apos;m passionate about creating solutions that address real-world challenges and enhance human-computer interactions.
                 </p>
                 <p className="text-muted leading-relaxed mt-4">
                     Currently investigating how AI coding tools can be designed to better serve both professional developers and programming beginners, focusing on creating more intuitive, personalized, and effective coding experiences.
