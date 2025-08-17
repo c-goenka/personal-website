@@ -2,7 +2,7 @@ export interface ResearchProject {
     id: string;
     title: string;
     description: string;
-    status: 'published' | 'submitted' | 'in-progress' | 'presented';
+    status?: 'published' | 'submitted' | 'in-progress' | 'presented';
     venue?: string;
     year?: string;
     links: {
@@ -27,7 +27,7 @@ export const researchProjects: ResearchProject[] = [
         id: "code-explanations",
         title: "Code Explanations: Automated Hierarchical Descriptions of Program Behavior",
         description: "This project introduces a tool that uses AI to generate layered code explanations—per-line, per-block, and by function parameter—to help users better understand and modify programs. Built with CodeMirror and GPT-4o, the system overlays interactive insights directly onto code. A pilot study showed its potential, and future work aims to expand its usability across skill levels, tasks, and languages.",
-        status: "submitted",
+        // status: "submitted",
         venue: "CHI 2025 Workshop Submission (Unpublished)",
         links: {
             pdf: "/papers/code-explanations-chi25.pdf",

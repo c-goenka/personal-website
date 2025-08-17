@@ -19,7 +19,7 @@ export const projects: Project[] = [
     {
         id: "board-wizard",
         title: "Board Wizard",
-        description: "AI-powered board game companion that helps players quickly find and understand rules without flipping through lengthy manuals",
+        description: "AI-powered board game companion that helps players quickly find and understand rules without flipping through lengthy manuals.",
         technologies: ["Python", "Streamlit", "LangChain", "OpenAI"],
         date: "2025-03",
         links: {
