@@ -80,5 +80,3 @@ If you liked the design of my website, feel free to use this codebase as a start
 The site uses a clean, modular architecture that's easy to extend. The centralized data management in the `data/` folder makes it simple to add new content types or modify existing ones without touching the UI components.
 
 ---
-
-💛 Built with care by Chetan • [View Live Site](https://cgoenka.me)
