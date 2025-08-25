@@ -20,7 +20,7 @@ export const projects: Project[] = [
         id: "board-wizard",
         title: "Board Wizard",
         description: "AI-powered board game companion that helps players quickly find and understand rules without flipping through lengthy manuals.",
-        technologies: ["Python", "Streamlit", "LangChain", "OpenAI"],
+        technologies: ["Python", "Streamlit", "LangChain", "OpenAI API"],
         date: "2025-03",
         links: {
             github: "https://github.com/c-goenka/board-wizard",
@@ -48,6 +48,36 @@ export const projects: Project[] = [
             github: "https://github.com/Acumane/code-compass",
             paper: "/papers/code-compass.pdf",
         }
+    },
+    {
+        id: "python-complier",
+        title: "Python Compiler",
+        description: "A compiler for a dialect of Python, featuring lexical analysis, parsing, semantic analysis, and RISC-V code generation.",
+        technologies: ["Java", "Python", "RISC-V (Assembly Language)", "JFlex (Compiler Tool)", "CUP (Compiler Tool)"],
+        date: "2024-01",
+        links: {
+            github: "https://github.com/c-goenka/python-complier"
+        },
+    },
+    {
+        id: "procedural-escape-game",
+        title: "Procedurally Generated Escape Game",
+        description: "A 2D tile-based procedural world generation game built in Java.",
+        technologies: ["Java", "Algorithms"],
+        date: "2023-01",
+        links: {
+            github: "https://github.com/c-goenka/procedural-escape-game"
+        },
+    },
+    {
+        id: "study-bears",
+        title: "Bear Territory",
+        description: "A mobile application designed to help students find nearby study locations.",
+        technologies: ["React Native", "React", "Expo", "HTML", "Navigation & Maps APIs"],
+        date: "2023-07",
+        links: {
+            github: "https://github.com/c-goenka/study-bears"
+        },
     },
 ];
 
