@@ -79,6 +79,26 @@ export const projects: Project[] = [
             github: "https://github.com/c-goenka/study-bears"
         },
     },
+    {
+        id: "coding-task-extractor",
+        title: "Coding Task Extractor",
+        description: "A literature review tool that uses a Python and LLM based pipeline to extract coding tasks described in user studies from research papers.",
+        technologies: ["Python", "OpenAI API", "LangChain", "Vector Stores and Search (FAISS)", "Pydantic", "Pandas"],
+        date: "In Progress",
+        links: {
+            github: "https://github.com/c-goenka/coding-task-extractor"
+        },
+    },
+    {
+        id: "shortcuts-overlay",
+        title: "Shortcuts Overlay",
+        description: "A shortcuts overlay screen to display my keyboard and mouse shortcuts.",
+        technologies: ["Python", "tkinter"],
+        date: "In Progress",
+        links: {
+            github: "https://github.com/c-goenka/shortcuts-overlay"
+        },
+    },
 ];
 
 export function getAllProjects(): Project[] {
@@ -86,6 +106,7 @@ export function getAllProjects(): Project[] {
 }
 
 export function formatDate(dateString: string): string {
+    if (dateString === 'In Progress') return dateString;
     const [year, month] = dateString.split('-');
     return new Date(parseInt(year), parseInt(month) - 1).toLocaleDateString('en-US', {
         year: 'numeric',
