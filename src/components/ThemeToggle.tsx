@@ -21,6 +21,7 @@ export const ThemeToggle = memo(function ThemeToggle() {
             onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
             className="text-muted hover:text-muted-hover transition-colors p-2 rounded-lg hover:bg-muted/10"
             aria-label="Toggle theme"
+            title="Toggle light/dark mode"
         >
         {theme === 'dark' ? (
             <LuSun size={20} />
