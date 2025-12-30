@@ -17,6 +17,16 @@ export interface Project {
 
 export const projects: Project[] = [
     {
+        id: "python-complier",
+        title: "Python Compiler",
+        description: "A compiler for a dialect of Python, featuring lexical analysis, parsing, semantic analysis, and RISC-V code generation.",
+        technologies: ["Java", "Python", "RISC-V (Assembly Language)", "JFlex (Compiler Tool)", "CUP (Compiler Tool)"],
+        date: "2024-05",
+        links: {
+            github: "https://github.com/c-goenka/python-complier"
+        },
+    },
+    {
         id: "board-wizard",
         title: "Board Wizard",
         description: "AI-powered board game companion that helps players quickly find and understand rules without flipping through lengthy manuals.",
@@ -28,38 +38,6 @@ export const projects: Project[] = [
         }
     },
     {
-        id: "personal-website",
-        title: "Personal Website",
-        description: "My personal portfolio website featuring a clean design and responsive layout to showcase my research and projects.",
-        technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Vercel"],
-        date: "2025-07",
-        links: {
-            github: "https://github.com/c-goenka/personal-website",
-            website: "https://cgoenka.me"
-        }
-    },
-    {
-        id: "code-compass",
-        title: "Code Compass",
-        description: "VS Code extension that provides a framework to connect documentation, the debugging ticket description and the relevant functions/code snippets of the project.",
-        technologies: ["TypeScript", "Python", "Flask", "PyTorch", "OpenCV"],
-        date: "2024-05",
-        links: {
-            github: "https://github.com/Acumane/code-compass",
-            paper: "/papers/code-compass.pdf",
-        }
-    },
-    {
-        id: "python-complier",
-        title: "Python Compiler",
-        description: "A compiler for a dialect of Python, featuring lexical analysis, parsing, semantic analysis, and RISC-V code generation.",
-        technologies: ["Java", "Python", "RISC-V (Assembly Language)", "JFlex (Compiler Tool)", "CUP (Compiler Tool)"],
-        date: "2024-01",
-        links: {
-            github: "https://github.com/c-goenka/python-complier"
-        },
-    },
-    {
         id: "procedural-escape-game",
         title: "Procedurally Generated Escape Game",
         description: "A 2D tile-based procedural world generation game built in Java.",
@@ -67,16 +45,6 @@ export const projects: Project[] = [
         date: "2023-01",
         links: {
             github: "https://github.com/c-goenka/procedural-escape-game"
-        },
-    },
-    {
-        id: "study-bears",
-        title: "Bear Territory",
-        description: "A mobile application designed to help students find nearby study locations.",
-        technologies: ["React Native", "React", "Expo", "HTML", "Navigation & Maps APIs"],
-        date: "2023-07",
-        links: {
-            github: "https://github.com/c-goenka/study-bears"
         },
     },
     {
@@ -90,19 +58,51 @@ export const projects: Project[] = [
         },
     },
     {
+        id: "code-compass",
+        title: "Code Compass",
+        description: "VS Code extension that provides a framework to connect documentation, the debugging ticket description and the relevant functions/code snippets of the project.",
+        technologies: ["TypeScript", "Python", "Flask", "PyTorch", "OpenCV"],
+        date: "2024-05",
+        links: {
+            github: "https://github.com/Acumane/code-compass",
+            paper: "/papers/code-compass.pdf",
+        }
+    },
+    {
+        id: "study-bears",
+        title: "Bear Territory",
+        description: "A mobile application designed to help students find nearby study locations.",
+        technologies: ["React Native", "React", "Expo", "HTML", "Navigation & Maps APIs"],
+        date: "2023-07",
+        links: {
+            github: "https://github.com/c-goenka/study-bears"
+        },
+    },
+    {
+        id: "personal-website",
+        title: "Personal Website",
+        description: "My personal portfolio website featuring a clean design and responsive layout to showcase my research and projects.",
+        technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Vercel"],
+        date: "2025-07",
+        links: {
+            github: "https://github.com/c-goenka/personal-website",
+            website: "https://cgoenka.me"
+        }
+    },
+    {
         id: "shortcuts-overlay",
         title: "Shortcuts Overlay",
         description: "A shortcuts overlay screen to display my keyboard and mouse shortcuts.",
         technologies: ["Python", "tkinter"],
         date: "In Progress",
         links: {
-            github: "https://github.com/c-goenka/shortcuts-overlay"
+            // github: "https://github.com/c-goenka/shortcuts-overlay"
         },
-    },
+    }
 ];
 
 export function getAllProjects(): Project[] {
-    return projects.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+    return projects;
 }
 
 export function formatDate(dateString: string): string {
