@@ -22,15 +22,12 @@ export default function Home() {
 
             {/* Name */}
             <div className="mb-8">
-                <h1 className="text-3xl font-semibold mb-4">Hi! I&apos;m Chetan.</h1>
+                <h1 className="text-3xl font-semibold mb-4">Hi! I'm Chetan.</h1>
                 <p className="text-muted leading-relaxed">
-                    I&apos;m an EECS M.S. student at UC Berkeley, exploring how human behavior and technology design intersect through machine learning and AI. I&apos;m passionate about creating solutions that address real-world challenges and enhance human-computer interactions.
+                    I'm a software engineer completing my M.S. in EECS at UC Berkeley. I've built everything from compilers to ML systems, and I'm currently building tools that help developers work more effectively with AI coding agents.
                 </p>
                 <p className="text-muted leading-relaxed mt-4">
-                    Currently investigating how AI coding tools can be designed to better serve both professional developers and programming beginners, focusing on creating more intuitive, personalized, and effective coding experiences.
-                </p>
-                <p className="text-muted leading-relaxed mt-4">
-                    I&apos;m interested in research and industry opportunities that bridge technology and human experience. Feel free to reach out at <a href="mailto:cgoenka@berkeley.edu" className="underline decoration-wavy underline-offset-4 decoration-decoration hover:text-muted-hover transition-colors">cgoenka@berkeley.edu</a>.
+                    I'm graduating in May 2026 and am interested in software engineering roles. Feel free to reach out at <a href="mailto:cgoenka@berkeley.edu" className="underline decoration-wavy underline-offset-4 decoration-decoration hover:text-muted-hover transition-colors">cgoenka@berkeley.edu</a>.
                 </p>
             </div>
 
