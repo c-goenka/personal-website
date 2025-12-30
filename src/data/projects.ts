@@ -27,6 +27,17 @@ export const projects: Project[] = [
         },
     },
     {
+        id: "memory-bottle",
+        title: "Memory Bottle",
+        description: "An interactive bottle for capturing sensory memories, featuring audio and color sampling, gesture-based interaction, and WiFi-synchronized audiovisual playback.",
+        technologies: ["Python", "C++", "Flask", "Arduino"],
+        date: "In Progress",
+        links: {
+            github: "https://github.com/c-goenka/memory-bottle",
+            paper: "/papers/memory-bottle.pdf",
+        },
+    },
+    {
         id: "board-wizard",
         title: "Board Wizard",
         description: "AI-powered board game companion that helps players quickly find and understand rules without flipping through lengthy manuals.",
