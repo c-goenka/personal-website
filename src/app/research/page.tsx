@@ -18,8 +18,8 @@ export default function Research() {
                 Back to Home
             </Link>
 
-            <h1 className="text-3xl font-semibold mb-2">Research</h1>
-            <p className="text-muted mb-6">Exploring human-computer interaction and AI-assisted programming.</p>
+            <h1 className="text-3xl font-semibold mb-8">Research</h1>
+            {/* <p className="text-muted mb-6">Exploring human-computer interaction and AI-assisted programming.</p> */}
 
             {/* Research Projects */}
             <div className="space-y-6">

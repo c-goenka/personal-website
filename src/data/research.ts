@@ -17,10 +17,11 @@ export interface ResearchProject {
 export const researchProjects: ResearchProject[] = [
     {
         id: "masters-thesis",
-        title: "AI-Assisted Programming",
-        description: "Exploring how AI-powered programming tools can reshape the way developers write, understand, and modify code, supporting better, faster, and more accessible software engineering through intelligent assistance and modern development workflows.",
+        title: "AI-Assisted Programming Tool",
+        description: "",
+        // description: "Exploring how AI-powered programming tools can reshape the way developers write, understand, and modify code, supporting better, faster, and more accessible software engineering through intelligent assistance and modern development workflows.",
         status: "in-progress",
-        year: "Expected 2026",
+        // year: "Expected 2026",
         links: {}
     },
     {
