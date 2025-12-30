@@ -10,22 +10,22 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-    title: "Chetan Goenka - HCI Researcher & EECS Student",
-    description: "HCI researcher and EECS M.S. student at UC Berkeley exploring human-computer interaction, AI-assisted programming, and technology design.",
-    keywords: "HCI, human-computer interaction, AI, programming, UC Berkeley, research, technology design",
+    title: "Chetan - EECS & HCI",
+    description: "EECS M.S. student at UC Berkeley exploring human-computer interaction and AI-assisted programming tools.",
+    keywords: "HCI, human-computer interaction, AI, programming, UC Berkeley, research, EECS",
     authors: [{ name: "Chetan Goenka" }],
     creator: "Chetan Goenka",
     openGraph: {
-        title: "Chetan Goenka - HCI Researcher & EECS Student",
-        description: "HCI researcher and EECS M.S. student at UC Berkeley exploring human-computer interaction, AI-assisted programming, and technology design.",
+        title: "Chetan - EECS & HCI",
+        description: "EECS M.S. student at UC Berkeley exploring human-computer interaction and AI-assisted programming tools.",
         url: "https://cgoenka.me",
         siteName: "Chetan Goenka",
         type: "website",
     },
     twitter: {
         card: "summary",
-        title: "Chetan Goenka - HCI Researcher & EECS Student",
-        description: "HCI researcher and EECS M.S. student at UC Berkeley exploring human-computer interaction, AI-assisted programming, and technology design.",
+        title: "Chetan - EECS & HCI",
+        description: "EECS M.S. student at UC Berkeley exploring human-computer interaction and AI-assisted programming tools.",
     },
 };
 
