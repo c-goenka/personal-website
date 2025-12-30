@@ -1,6 +1,6 @@
 # My Personal Website
 
-My personal website combining simplicity, clarity, and warmth. Built with a clean, modern architecture focused on intuitive design, accessibility, and performance.
+<!-- My personal website combining simplicity, clarity, and warmth. Built with a clean, modern architecture focused on intuitive design, accessibility, and performance. -->
 
 ## Content
 
@@ -33,7 +33,7 @@ src/
 └── utils/           # Shared utilities and helpers
 ```
 
-## Development
+<!-- ## Development
 
 Feel free to use this as a template for your own website. Here's how to download it locally and customize it:
 
@@ -68,6 +68,6 @@ Feel free to use this as a template for your own website. Here's how to download
 - Colors and themes are defined in `src/app/globals.css`
 - The warm color palette can be easily adjusted by modifying CSS variables
 - Font: To change from DM Sans, update the Google Fonts import in `src/app/layout.tsx` and modify the `--font-dm-sans` CSS variable in `globals.css`
-- Typography and spacing use Tailwind classes throughout
+- Typography and spacing use Tailwind classes throughout -->
 
 ---
