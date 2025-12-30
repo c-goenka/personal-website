@@ -25,6 +25,18 @@ export const researchProjects: ResearchProject[] = [
         links: {}
     },
     {
+        id: "memory-bottle",
+        title: "Memory Bottle",
+        description: "Memory Bottle is an interactive vessel that lets users preserve and relive fleeting moments by recording sound and color. Powered by an ESP32 and Arduino ecosystem, the system uses a state machine to manage sensor data and wireless uploads. Users simply tilt the bottle to 'pour' the memory out, triggering an immersive playback where the audio is heard and the captured color fills the room.",
+        status: "published",
+        venue: "Tangible, Embedded, and Embodied Interaction (TEI)",
+        year: "2026",
+        links: {
+            pdf: "/papers/memory-bottle.pdf",
+            code: "https://github.com/c-goenka/memory-bottle"
+        },
+    },
+    {
         id: "code-explanations",
         title: "Code Explanations: Automated Hierarchical Descriptions of Program Behavior",
         description: "This project introduces a tool that uses AI to generate layered code explanations—per-line, per-block, and by function parameter—to help users better understand and modify programs. Built with CodeMirror and GPT-4o, the system overlays interactive insights directly onto code. A pilot study showed its potential, and future work aims to expand its usability across skill levels, tasks, and languages.",
