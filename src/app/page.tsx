@@ -119,13 +119,13 @@ export default function Home() {
                         {featuredResearch.map((project) => (
                             <div key={project.id} className="border border-border rounded-lg p-5 hover:border-muted transition-all duration-200">
                                 {/* Status Badge */}
-                                {project.status && (
+                                {/* {project.status && (
                                     <div className="flex items-start gap-3 mb-2">
                                         <span className={`px-2 py-1 text-xs font-medium rounded-md ${getStatusColor(project.status)}`}>
                                             {getStatusLabel(project.status)}
                                         </span>
                                     </div>
-                                )}
+                                )} */}
 
                                 {/* Title */}
                                 <h4 className="text-lg font-semibold mb-2 text-foreground">
@@ -223,7 +223,7 @@ export default function Home() {
                 </div>
 
                 {/* View All Links */}
-                <div className="flex gap-4 text-sm mt-10">
+                <div className="flex gap-4 text-sm mt-7">
                     <Link
                         href="/research"
                         className="text-muted hover:text-muted-hover transition-colors"
