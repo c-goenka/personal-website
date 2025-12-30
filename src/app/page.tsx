@@ -57,7 +57,7 @@ export default function Home() {
                             GitHub
                         </a>
                         <a
-                            href="/chetan-goenka-resume.pdf"
+                            href="/chetan_goenka_resume.pdf"
                             target="_blank"
                             rel="noopener noreferrer"
                             aria-label="Download Chetan's resume (PDF)"
