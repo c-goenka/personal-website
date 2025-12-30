@@ -2,8 +2,25 @@ import Image from "next/image";
 import Link from "next/link";
 import { LuLinkedin, LuGithub, LuLink, LuFileUser } from "react-icons/lu";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import { getAllResearchProjects } from "@/data/research";
+import { getAllProjects, formatDate } from "@/data/projects";
+import { getStatusLabel, getStatusColor } from "@/utils/badges";
+import { getLinkIcon, getLinkLabel } from "@/utils/linkIcons";
 
 export default function Home() {
+    const allResearch = getAllResearchProjects();
+    const allProjects = getAllProjects();
+
+    // Featured research
+    const featuredResearch = allResearch.filter(r =>
+        ['code-explanations', 'memory-bottle'].includes(r.id)
+    );
+
+    // Featured projects
+    const featuredProjects = allProjects.filter(p =>
+        ['python-complier', 'board-wizard'].includes(p.id)
+    );
+
     return (
         <div className="max-w-3xl mx-auto px-8 py-20">
             {/* Profile Photo and Theme Toggle */}
@@ -88,6 +105,137 @@ export default function Home() {
                             Projects
                         </Link>
                     </div>
+                </div>
+            </div>
+
+            {/* Featured Work Section */}
+            <div className="mb-12">
+                <h2 className="text-xl font-semibold mb-6">Featured Work</h2>
+
+                {/* Featured Research */}
+                <div className="mb-8">
+                    <h3 className="text-lg font-medium mb-4 text-muted">Research</h3>
+                    <div className="space-y-4">
+                        {featuredResearch.map((project) => (
+                            <div key={project.id} className="border border-border rounded-lg p-5 hover:border-muted transition-all duration-200">
+                                {/* Status Badge */}
+                                {project.status && (
+                                    <div className="flex items-start gap-3 mb-2">
+                                        <span className={`px-2 py-1 text-xs font-medium rounded-md ${getStatusColor(project.status)}`}>
+                                            {getStatusLabel(project.status)}
+                                        </span>
+                                    </div>
+                                )}
+
+                                {/* Title */}
+                                <h4 className="text-lg font-semibold mb-2 text-foreground">
+                                    {project.title}
+                                </h4>
+
+                                {/* Description */}
+                                <p className="text-muted leading-relaxed mb-3 text-sm">
+                                    {project.description}
+                                </p>
+
+                                {/* Venue and Links */}
+                                <div className="flex items-center gap-4 text-sm flex-wrap">
+                                    {project.venue && (
+                                        <span className="text-muted">
+                                            {project.venue} {project.year}
+                                        </span>
+                                    )}
+                                    {project.year && !project.venue && (
+                                        <span className="text-muted">{project.year}</span>
+                                    )}
+
+                                    {Object.entries(project.links).map(([type, url]) => (
+                                        url && (
+                                            <Link
+                                                key={type}
+                                                href={url}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="flex items-center gap-1 text-muted hover:text-muted-hover transition-colors"
+                                            >
+                                                {getLinkIcon(type)}
+                                                {getLinkLabel(type)}
+                                            </Link>
+                                        )
+                                    ))}
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+                {/* Featured Projects */}
+                <div className="mb-6">
+                    <h3 className="text-lg font-medium mb-4 text-muted">Projects</h3>
+                    <div className="space-y-4">
+                        {featuredProjects.map((project) => (
+                            <div key={project.id} className="border border-border rounded-lg p-5 hover:border-muted transition-all duration-200">
+                                {/* Title */}
+                                <h4 className="text-lg font-semibold mb-2 text-foreground">
+                                    {project.title}
+                                </h4>
+
+                                {/* Description */}
+                                <p className="text-muted leading-relaxed mb-3 text-sm">
+                                    {project.description}
+                                </p>
+
+                                {/* Technologies */}
+                                <div className="flex flex-wrap gap-2 mb-3">
+                                    {project.technologies.map((tech) => (
+                                        <span
+                                            key={tech}
+                                            className="px-2 py-1 bg-muted/10 text-muted text-xs rounded-md"
+                                        >
+                                            {tech}
+                                        </span>
+                                    ))}
+                                </div>
+
+                                {/* Date and Links */}
+                                <div className="flex items-center gap-4 text-sm flex-wrap">
+                                    <span className="text-muted">
+                                        {formatDate(project.date)}
+                                    </span>
+
+                                    {Object.entries(project.links).map(([type, url]) => (
+                                        url && (
+                                            <Link
+                                                key={type}
+                                                href={url}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="flex items-center gap-1 text-muted hover:text-muted-hover transition-colors"
+                                            >
+                                                {getLinkIcon(type)}
+                                                {getLinkLabel(type)}
+                                            </Link>
+                                        )
+                                    ))}
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+                {/* View All Links */}
+                <div className="flex gap-4 text-sm mt-10">
+                    <Link
+                        href="/research"
+                        className="text-muted hover:text-muted-hover transition-colors"
+                    >
+                        View all research →
+                    </Link>
+                    <Link
+                        href="/projects"
+                        className="text-muted hover:text-muted-hover transition-colors"
+                    >
+                        View all projects →
+                    </Link>
                 </div>
             </div>
         </div>
