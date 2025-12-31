@@ -25,7 +25,7 @@ const LINK_LABELS = {
     'paper' : 'Paper',
     'code': 'Code',
     'documentation': 'Docs',
-    'presentation': 'Slides',
+    'presentation': 'Presentation',
     'portfolio': 'Portfolio',
 } as const;
 
