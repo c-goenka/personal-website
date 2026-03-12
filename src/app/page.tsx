@@ -41,7 +41,7 @@ export default function Home() {
             <div className="mb-8">
                 <h1 className="text-3xl font-semibold mb-4">Hi! I&apos;m Chetan.</h1>
                 <p className="text-muted leading-relaxed">
-                    I&apos;m a engineer completing my M.S. in EECS at UC Berkeley. I&apos;ve built full-stack applications, ML and RL systems, and compilers. I&apos;m currently building tools that help developers work more effectively with AI coding agents.
+                    I&apos;m an engineer completing my M.S. in EECS at UC Berkeley. I&apos;ve built full-stack applications, ML and RL systems, and compilers. I&apos;m currently building tools that help developers work more effectively with AI coding agents.
                 </p>
                 <p className="text-muted leading-relaxed mt-4">
                     I&apos;m graduating in May 2026 and am interested in software engineering roles. Feel free to reach out at <a href="mailto:cgoenka@berkeley.edu" className="decoration-decoration hover:text-muted-hover transition-colors">cgoenka@berkeley.edu</a>.
