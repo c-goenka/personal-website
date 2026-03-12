@@ -16,9 +16,9 @@ export interface ResearchProject {
 
 export const researchProjects: ResearchProject[] = [
     {
-        id: "masters-thesis",
-        title: "AI-Assisted Programming Tool",
-        description: "",
+        id: "think-aloud-ide",
+        title: "Multi-Agent AI Code Editor with Speech Intelligence",
+        description: "Prospective UIST 2026 submission 🤞",
         // description: "Exploring how AI-powered programming tools can reshape the way developers write, understand, and modify code, supporting better, faster, and more accessible software engineering through intelligent assistance and modern development workflows.",
         status: "in-progress",
         // year: "Expected 2026",
@@ -29,7 +29,7 @@ export const researchProjects: ResearchProject[] = [
         title: "Code Explanations: Automated Hierarchical Descriptions of Program Behavior",
         description: "This project introduces a tool that uses AI to generate layered code explanations—per-line, per-block, and by function parameter—to help users better understand and modify programs. Built with CodeMirror and GPT-4o, the system overlays interactive insights directly onto code. A pilot study showed its potential, and future work aims to expand its usability across skill levels, tasks, and languages.",
         // status: "submitted",
-        venue: "CHI 2025 Workshop Submission (Unpublished)",
+        venue: "CHI 2025 Workshop Submission (Not Published)",
         links: {
             pdf: "/papers/code-explanations-chi25.pdf",
             code: "https://github.com/c-goenka/code-explanations"
