@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { getAllProjects, formatDate } from "@/data/projects";
-import { getLinkIcon, getLinkLabel } from "@/utils/linkIcons";
+import { getLinkLabel } from "@/utils/linkIcons";
 import { LuArrowLeft } from "react-icons/lu";
 
 export default function Projects() {
@@ -21,39 +21,32 @@ export default function Projects() {
             <p className="text-muted mb-8">Selected work, ordered by relevance</p>
 
             {/* Projects */}
-            <div className="space-y-6">
+            <div className="space-y-8">
                 {projects.map((project) => (
-                    <div key={project.id} className="border border-border rounded-lg p-6 hover:border-muted transition-all duration-200">
+                    <div key={project.id}>
                         {/* Title */}
-                        <h2 className="text-xl font-semibold mb-3 text-foreground">
+                        <h2 className="text-lg font-semibold mb-1 text-foreground">
                             {project.title}
                         </h2>
 
                         {/* Description */}
-                        <p className="text-muted leading-relaxed mb-4">
+                        <p className="text-muted leading-relaxed mb-2">
                             {project.description}
                         </p>
 
                         {/* Technologies */}
-                        <div className="flex flex-wrap gap-2 mb-4">
-                            {project.technologies.map((tech) => (
-                                <span
-                                    key={tech}
-                                    className="px-2 py-1 bg-muted/10 text-muted text-xs rounded-md"
-                                >
-                                    {tech}
-                                </span>
-                            ))}
-                        </div>
+                        {project.technologies.length > 0 && (
+                            <p className="text-muted text-sm mb-2">
+                                {project.technologies.join(" · ")}
+                            </p>
+                        )}
 
                         {/* Date and Links */}
                         <div className="flex items-center gap-4 text-sm flex-wrap">
-                            {/* Date */}
                             <span className="text-muted">
                                 {formatDate(project.date)}
                             </span>
 
-                            {/* Links */}
                             {Object.entries(project.links).map(([type, url]) => (
                                 url && (
                                     <Link
@@ -61,9 +54,8 @@ export default function Projects() {
                                         href={url}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="flex items-center gap-1 text-muted hover:text-muted-hover transition-colors"
+                                        className="text-muted hover:text-muted-hover transition-colors"
                                     >
-                                        {getLinkIcon(type)}
                                         {getLinkLabel(type)}
                                     </Link>
                                 )

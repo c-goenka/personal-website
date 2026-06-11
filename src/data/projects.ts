@@ -19,7 +19,7 @@ export const projects: Project[] = [
     {
         id: "python-complier",
         title: "Python Compiler",
-        description: "Compiler for Python dialect featuring a complete compilation pipeline with lexical analysis, parsing, semantic analysis, and RISC-V code generation.",
+        description: "A compiler I built from scratch in Java for a Python dialect — the whole journey from raw source through lexing, parsing, and type checking down to RISC-V assembly, plus a little web IDE that lets you watch each stage happen.",
         technologies: ["Java", "Python", "RISC-V (Assembly Language)", "JFlex (Compiler Tool)", "CUP (Compiler Tool)"],
         date: "2024-05",
         links: {
@@ -29,7 +29,7 @@ export const projects: Project[] = [
     {
         id: "board-wizard",
         title: "Board Wizard",
-        description: "AI-powered board game companion that helps players quickly find and understand rules without flipping through lengthy manuals.",
+        description: "A companion for board-game night: ask a rules question in plain English and it answers straight from the rulebook, so nobody has to dig through the manual mid-game. Built on a retrieval pipeline over the OpenAI API.",
         technologies: ["Python", "Streamlit", "LangChain", "OpenAI API"],
         date: "2025-03",
         links: {
@@ -40,7 +40,7 @@ export const projects: Project[] = [
     {
         id: "police-records",
         title: "Police Records Classification",
-        description: "NLP-based classification system designed to organize official police documentation using SetFit for few-shot learning and classical algorithms for interpretable analysis.",
+        description: "A tool for making sense of large piles of police records, using few-shot learning to sort documents into meaningful categories while keeping the results interpretable enough to trust.",
         technologies: ["Python", "SetFit", "Sentence Transformers (SBERT)", "Scikit-learn", "Hugging Face", "Plotly"],
         date: "2025-11",
         links: {
@@ -50,7 +50,7 @@ export const projects: Project[] = [
     {
         id: "procedural-escape-game",
         title: "Procedurally Generated Escape Game",
-        description: "2D game engine using deterministic procedural generation, rejection sampling, and neighbor checking to create unique, solvable worlds with save/replay states.",
+        description: "A 2D game engine that builds a fresh, fully solvable world every time you play — generating its rooms and corridors procedurally, and remembering your progress so you can save and replay.",
         technologies: ["Java", "Algorithms", "StdDraw / Algs4", "Git"],
         date: "2023-01",
         links: {
@@ -60,7 +60,7 @@ export const projects: Project[] = [
     {
         id: "code-compass",
         title: "Code Compass",
-        description: "VS Code extension that provides a framework to connect documentation, the debugging ticket description and the relevant functions/code snippets of the project.",
+        description: "A VS Code extension that ties together the pieces you juggle while debugging — the docs, the ticket, and the code actually involved — so the context you need lives in one place.",
         technologies: ["TypeScript", "Python", "Flask", "PyTorch", "OpenCV"],
         date: "2024-05",
         links: {
@@ -71,7 +71,7 @@ export const projects: Project[] = [
     {
         id: "coding-task-extractor",
         title: "Coding Task Extractor",
-        description: "Literature review tool that uses a Python and LLM based pipeline to extract coding tasks described in user studies from research papers.",
+        description: "A research helper that reads through papers and pulls out the coding tasks buried in their user studies, turning a tedious literature review into something an LLM pipeline can take the first pass on.",
         technologies: ["Python", "OpenAI API", "LangChain", "Vector Stores and Search (FAISS)", "Pydantic", "Pandas"],
         date: "In Progress",
         links: {
@@ -81,7 +81,7 @@ export const projects: Project[] = [
     {
         id: "personal-website",
         title: "Personal Website",
-        description: "My personal portfolio website featuring a clean design and responsive layout to showcase my research and projects.",
+        description: "This site — a deliberately simple, fast place to show what I've built and what I'm exploring.",
         technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Vercel"],
         date: "2025-07",
         links: {
@@ -92,7 +92,7 @@ export const projects: Project[] = [
     {
         id: "roots-visa",
         title: "Roots",
-        description: "Local food marketplace that promotes eco-friendly habits through carbon footprint tracking, vendor discovery, and a rewards system for sustainable purchases.",
+        description: "A concept for a local food marketplace that nudges people toward greener choices — discovering nearby vendors, seeing the carbon footprint of a purchase, and earning small rewards for sustainable habits.",
         technologies: [],
         date: "2024-07",
         links: {
@@ -103,7 +103,7 @@ export const projects: Project[] = [
     {
         id: "study-bears",
         title: "Bear Territory",
-        description: "Mobile application designed to help students find nearby study locations.",
+        description: "A mobile app that helps students find a good place to study nearby — open seats, the right vibe, mapped out so you can just go.",
         technologies: ["React Native", "React", "Expo", "HTML", "Navigation & Maps APIs"],
         date: "2023-07",
         links: {
@@ -113,7 +113,7 @@ export const projects: Project[] = [
     {
         id: "shortcuts-overlay",
         title: "Shortcuts Overlay",
-        description: "Shortcuts overlay screen to display my keyboard and mouse shortcuts.",
+        description: "A little always-on overlay that shows my keyboard and mouse shortcuts at a glance — a personal tool for staying fast without memorizing everything.",
         technologies: ["Python", "tkinter"],
         date: "In Progress",
         links: {

@@ -1,15 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
-import { LuLinkedin, LuGithub, LuLink, LuFileUser } from "react-icons/lu";
-import { ThemeToggle } from "@/components/ThemeToggle";
+import { LuLinkedin, LuGithub, LuFileUser } from "react-icons/lu";
 import { getAllResearchProjects } from "@/data/research";
 import { getAllProjects, formatDate } from "@/data/projects";
-import { getStatusLabel, getStatusColor } from "@/utils/badges";
-import { getLinkIcon, getLinkLabel } from "@/utils/linkIcons";
+import { getAllExperience } from "@/data/experience";
+import { getLinkLabel } from "@/utils/linkIcons";
 
 export default function Home() {
     const allResearch = getAllResearchProjects();
     const allProjects = getAllProjects();
+    const allExperience = getAllExperience();
 
     // Featured research
     const featuredResearch = allResearch.filter(r =>
@@ -23,8 +23,8 @@ export default function Home() {
 
     return (
         <div className="max-w-3xl mx-auto px-8 py-20">
-            {/* Profile Photo and Theme Toggle */}
-            <div className="mb-8 flex justify-between items-start">
+            {/* Profile Photo */}
+            <div className="mb-8">
                 <div className="w-32 h-32 rounded-full overflow-hidden">
                     <Image
                         src="/images/chetan.jpeg"
@@ -34,19 +34,18 @@ export default function Home() {
                         className="w-full h-full object-cover"
                     />
                 </div>
-                <ThemeToggle />
             </div>
 
             {/* Name */}
             <div className="mb-8">
                 <h1 className="text-3xl font-semibold mb-4">
-                    Hi! I&apos;m <a href="https://cgoenka.mmm.page/me" target="_blank" rel="noopener noreferrer" className="underline">Chetan</a>.
+                    Hi! I&apos;m Chetan.
                 </h1>
                 <p className="text-muted leading-relaxed">
-                    I&apos;m an engineer completing my M.S. in EECS at UC Berkeley. I&apos;ve built full-stack applications, ML and RL systems, and compilers. I&apos;m currently building tools that help developers work more effectively with AI coding agents.
+                    I&apos;m an engineer finishing my M.S. in EECS at UC Berkeley — graduating August 2026. I&apos;ve built things across the stack: full-stack apps, ML pipelines, a compiler from scratch, and a hardware piece that listens to a room and plays it back. Lately I&apos;ve been most interested in how AI tools can make programming feel more intuitive, which is what my current research is about.
                 </p>
                 <p className="text-muted leading-relaxed mt-4">
-                    I&apos;m graduating in May 2026 and am interested in software engineering roles. Feel free to reach out at <a href="mailto:cgoenka@berkeley.edu" className="decoration-decoration hover:text-muted-hover transition-colors">cgoenka@berkeley.edu</a>.
+                    I&apos;ll be available for full-time software engineering roles from late August. Feel free to reach out at <a href="mailto:cgoenka@berkeley.edu" className="decoration-decoration hover:text-muted-hover transition-colors">cgoenka@berkeley.edu</a>.
                 </p>
             </div>
 
@@ -93,20 +92,53 @@ export default function Home() {
                     {/* Navigation Links */}
                     <div className="flex flex-col gap-2">
                         <Link
-                            href="/research"
-                            className="text-muted hover:text-muted-hover transition-colors flex items-center gap-2"
-                        >
-                            <LuLink size={16} />
-                            Research
-                        </Link>
-                        <Link
                             href="/projects"
-                            className="text-muted hover:text-muted-hover transition-colors flex items-center gap-2"
+                            className="text-muted hover:text-muted-hover transition-colors"
                         >
-                            <LuLink size={16} />
                             Projects
                         </Link>
+                        <Link
+                            href="/research"
+                            className="text-muted hover:text-muted-hover transition-colors"
+                        >
+                            Research
+                        </Link>
                     </div>
+                </div>
+            </div>
+
+            {/* Skills Section */}
+            <div className="mb-12">
+                <h2 className="text-xl font-semibold mb-4">Skills</h2>
+                <div className="text-sm space-y-1">
+                    <div className="flex gap-3">
+                        <span className="text-foreground w-40 shrink-0">Languages</span>
+                        <span className="text-muted">Python · TypeScript · Java · SQL · C/C++</span>
+                    </div>
+                    <div className="flex gap-3">
+                        <span className="text-foreground w-40 shrink-0">Frameworks &amp; Tools</span>
+                        <span className="text-muted">React · Next.js · PyTorch · scikit-learn · Pandas · NumPy · OpenAI API · Git</span>
+                    </div>
+                </div>
+            </div>
+
+            {/* Experience Section */}
+            <div className="mb-12">
+                <h2 className="text-xl font-semibold mb-6">Experience</h2>
+                <div className="space-y-6">
+                    {allExperience.map((exp) => (
+                        <div key={exp.id}>
+                            <div className="flex items-baseline justify-between gap-4 flex-wrap">
+                                <h3 className="text-base font-semibold text-foreground">
+                                    {exp.role} · {exp.organization}
+                                </h3>
+                                <span className="text-muted text-sm">{exp.date}</span>
+                            </div>
+                            <p className="text-muted leading-relaxed text-sm mt-1">
+                                {exp.description}
+                            </p>
+                        </div>
+                    ))}
                 </div>
             </div>
 
@@ -114,28 +146,67 @@ export default function Home() {
             <div className="mb-12">
                 <h2 className="text-xl font-semibold mb-6">Featured Work</h2>
 
-                {/* Featured Research */}
+                {/* Featured Projects */}
                 <div className="mb-8">
-                    <h3 className="text-lg font-medium mb-4 text-muted">Research</h3>
-                    <div className="space-y-4">
-                        {featuredResearch.map((project) => (
-                            <div key={project.id} className="border border-border rounded-lg p-5 hover:border-muted transition-all duration-200">
-                                {/* Status Badge */}
-                                {/* {project.status && (
-                                    <div className="flex items-start gap-3 mb-2">
-                                        <span className={`px-2 py-1 text-xs font-medium rounded-md ${getStatusColor(project.status)}`}>
-                                            {getStatusLabel(project.status)}
-                                        </span>
-                                    </div>
-                                )} */}
-
+                    <h3 className="text-lg font-medium mb-4 text-muted">Projects</h3>
+                    <div className="space-y-6">
+                        {featuredProjects.map((project) => (
+                            <div key={project.id}>
                                 {/* Title */}
-                                <h4 className="text-lg font-semibold mb-2 text-foreground">
+                                <h4 className="text-base font-semibold mb-1 text-foreground">
                                     {project.title}
                                 </h4>
 
                                 {/* Description */}
-                                <p className="text-muted leading-relaxed mb-3 text-sm">
+                                <p className="text-muted leading-relaxed mb-2 text-sm">
+                                    {project.description}
+                                </p>
+
+                                {/* Technologies */}
+                                {project.technologies.length > 0 && (
+                                    <p className="text-muted text-sm mb-2">
+                                        {project.technologies.join(" · ")}
+                                    </p>
+                                )}
+
+                                {/* Date and Links */}
+                                <div className="flex items-center gap-4 text-sm flex-wrap">
+                                    <span className="text-muted">
+                                        {formatDate(project.date)}
+                                    </span>
+
+                                    {Object.entries(project.links).map(([type, url]) => (
+                                        url && (
+                                            <Link
+                                                key={type}
+                                                href={url}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="text-muted hover:text-muted-hover transition-colors"
+                                            >
+                                                {getLinkLabel(type)}
+                                            </Link>
+                                        )
+                                    ))}
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+                {/* Featured Research */}
+                <div className="mb-6">
+                    <h3 className="text-lg font-medium mb-4 text-muted">Research</h3>
+                    <div className="space-y-6">
+                        {featuredResearch.map((project) => (
+                            <div key={project.id}>
+                                {/* Title */}
+                                <h4 className="text-base font-semibold mb-1 text-foreground">
+                                    {project.title}
+                                </h4>
+
+                                {/* Description */}
+                                <p className="text-muted leading-relaxed mb-2 text-sm">
                                     {project.description}
                                 </p>
 
@@ -157,63 +228,8 @@ export default function Home() {
                                                 href={url}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="flex items-center gap-1 text-muted hover:text-muted-hover transition-colors"
+                                                className="text-muted hover:text-muted-hover transition-colors"
                                             >
-                                                {getLinkIcon(type)}
-                                                {getLinkLabel(type)}
-                                            </Link>
-                                        )
-                                    ))}
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-
-                {/* Featured Projects */}
-                <div className="mb-6">
-                    <h3 className="text-lg font-medium mb-4 text-muted">Projects</h3>
-                    <div className="space-y-4">
-                        {featuredProjects.map((project) => (
-                            <div key={project.id} className="border border-border rounded-lg p-5 hover:border-muted transition-all duration-200">
-                                {/* Title */}
-                                <h4 className="text-lg font-semibold mb-2 text-foreground">
-                                    {project.title}
-                                </h4>
-
-                                {/* Description */}
-                                <p className="text-muted leading-relaxed mb-3 text-sm">
-                                    {project.description}
-                                </p>
-
-                                {/* Technologies */}
-                                <div className="flex flex-wrap gap-2 mb-3">
-                                    {project.technologies.map((tech) => (
-                                        <span
-                                            key={tech}
-                                            className="px-2 py-1 bg-muted/10 text-muted text-xs rounded-md"
-                                        >
-                                            {tech}
-                                        </span>
-                                    ))}
-                                </div>
-
-                                {/* Date and Links */}
-                                <div className="flex items-center gap-4 text-sm flex-wrap">
-                                    <span className="text-muted">
-                                        {formatDate(project.date)}
-                                    </span>
-
-                                    {Object.entries(project.links).map(([type, url]) => (
-                                        url && (
-                                            <Link
-                                                key={type}
-                                                href={url}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="flex items-center gap-1 text-muted hover:text-muted-hover transition-colors"
-                                            >
-                                                {getLinkIcon(type)}
                                                 {getLinkLabel(type)}
                                             </Link>
                                         )
@@ -227,16 +243,16 @@ export default function Home() {
                 {/* View All Links */}
                 <div className="flex gap-4 text-sm mt-7">
                     <Link
-                        href="/research"
-                        className="text-muted hover:text-muted-hover transition-colors"
-                    >
-                        View all research →
-                    </Link>
-                    <Link
                         href="/projects"
                         className="text-muted hover:text-muted-hover transition-colors"
                     >
                         View all projects →
+                    </Link>
+                    <Link
+                        href="/research"
+                        className="text-muted hover:text-muted-hover transition-colors"
+                    >
+                        View all research →
                     </Link>
                 </div>
             </div>

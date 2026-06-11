@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { getAllResearchProjects } from "@/data/research";
-import { getStatusLabel, getStatusColor } from "@/utils/badges";
-import { getLinkIcon, getLinkLabel } from "@/utils/linkIcons";
+import { getStatusLabel } from "@/utils/badges";
+import { getLinkLabel } from "@/utils/linkIcons";
 import { LuArrowLeft } from "react-icons/lu";
 
 export default function Research() {
@@ -22,31 +22,27 @@ export default function Research() {
             <p className="text-muted mb-8">Selected work, ordered by relevance</p>
 
             {/* Research Projects */}
-            <div className="space-y-6">
+            <div className="space-y-8">
                 {projects.map((project) => (
-                    <div key={project.id} className="border border-border rounded-lg p-6 hover:border-muted transition-all duration-200">
-                        {/* Status Badge */}
-                        {project.status && (
-                            <div className="flex items-start gap-3 mb-3">
-                                <span className={`px-2 py-1 text-xs font-medium rounded-md ${getStatusColor(project.status)}`}>
-                                    {getStatusLabel(project.status)}
-                                </span>
-                            </div>
-                        )}
-
+                    <div key={project.id}>
                         {/* Title */}
-                        <h2 className="text-xl font-semibold mb-3 text-foreground">
+                        <h2 className="text-lg font-semibold mb-1 text-foreground">
                             {project.title}
                         </h2>
 
                         {/* Description */}
-                        <p className="text-muted leading-relaxed mb-4">
+                        <p className="text-muted leading-relaxed mb-2">
                             {project.description}
                         </p>
 
-                        {/* Venue and Links */}
-                        <div className="flex items-center gap-4 text-sm">
-                            {/* Venue Info */}
+                        {/* Status, Venue, and Links */}
+                        <div className="flex items-center gap-4 text-sm flex-wrap">
+                            {project.status && (
+                                <span className="text-muted">
+                                    {getStatusLabel(project.status)}
+                                </span>
+                            )}
+
                             {project.venue && (
                                 <span className="text-muted">
                                     {project.venue} {project.year}
@@ -56,7 +52,6 @@ export default function Research() {
                                 <span className="text-muted">{project.year}</span>
                             )}
 
-                            {/* Links */}
                             {Object.entries(project.links).map(([type, url]) => (
                                 url && (
                                     <Link
@@ -64,9 +59,8 @@ export default function Research() {
                                         href={url}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="flex items-center gap-1 text-muted hover:text-muted-hover transition-colors"
+                                        className="text-muted hover:text-muted-hover transition-colors"
                                     >
-                                        {getLinkIcon(type)}
                                         {getLinkLabel(type)}
                                     </Link>
                                 )

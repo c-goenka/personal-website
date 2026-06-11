@@ -18,18 +18,15 @@ export const researchProjects: ResearchProject[] = [
     {
         id: "think-aloud-ide",
         title: "Multi-Agent AI Code Editor with Speech Intelligence",
-        description: "Prospective UIST 2026 submission 🤞",
-        // description: "Exploring how AI-powered programming tools can reshape the way developers write, understand, and modify code, supporting better, faster, and more accessible software engineering through intelligent assistance and modern development workflows.",
+        description: "A code editor that listens while you think out loud, turning the way developers naturally talk through a problem into help from AI agents that can edit, explain, and navigate alongside you.",
         status: "in-progress",
-        // year: "Expected 2026",
         links: {}
     },
     {
         id: "code-explanations",
         title: "Code Explanations: Automated Hierarchical Descriptions of Program Behavior",
-        description: "This project introduces a tool that uses AI to generate layered code explanations—per-line, per-block, and by function parameter—to help users better understand and modify programs. Built with CodeMirror and GPT-4o, the system overlays interactive insights directly onto code. A pilot study showed its potential, and future work aims to expand its usability across skill levels, tasks, and languages.",
-        // status: "submitted",
-        venue: "CHI 2025 Workshop Submission (Not Published)",
+        description: "A tool that layers AI-generated explanations right onto your code — per line, per block, and per parameter — so a program becomes easier to read and safer to change. Built on CodeMirror and GPT-4o, with interactive insights rendered directly in the editor.",
+        venue: "CHI 2025 Workshop submission",
         links: {
             pdf: "/papers/code-explanations-chi25.pdf",
             code: "https://github.com/c-goenka/code-explanations"
@@ -38,7 +35,7 @@ export const researchProjects: ResearchProject[] = [
     {
         id: "memory-bottle",
         title: "Memory Bottle",
-        description: "Memory Bottle is an interactive vessel that lets users preserve and relive fleeting moments by recording sound and color. Powered by an ESP32 and Arduino ecosystem, the system uses a state machine to manage sensor data and wireless uploads. Users simply tilt the bottle to 'pour' the memory out, triggering an immersive playback where the audio is heard and the captured color fills the room.",
+        description: "An interactive bottle that captures a moment — its sound and its color — and pours it back out when you tip it over, filling the room with the audio and light of when you saved it. Underneath, an ESP32 and a handful of sensors talk to a small server that keeps the audio and lights in sync.",
         status: "published",
         venue: "Tangible, Embedded, and Embodied Interaction (TEI)",
         year: "2026",

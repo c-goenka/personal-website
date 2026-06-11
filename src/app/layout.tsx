@@ -2,30 +2,33 @@ import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import Layout from "@/components/Layout";
-import { ThemeProvider } from "@/components/ThemeProvider";
 
 const dmSans = DM_Sans({
     subsets: ["latin"],
     variable: "--font-dm-sans",
 });
 
+const description =
+    "Engineer finishing my M.S. at UC Berkeley. I build full-stack apps, ML systems, compilers, and developer tools — and I research how AI can make programming feel more human.";
+
 export const metadata: Metadata = {
-    title: "Chetan - EECS & HCI",
-    description: "EECS M.S. student at UC Berkeley exploring human-computer interaction and AI-assisted programming tools.",
-    keywords: "HCI, human-computer interaction, AI, programming, UC Berkeley, research, EECS",
+    metadataBase: new URL("https://cgoenka.me"),
+    title: "Chetan Goenka — Software Engineer",
+    description,
+    keywords: "software engineer, full-stack, machine learning, compilers, developer tools, AI, UC Berkeley, EECS",
     authors: [{ name: "Chetan Goenka" }],
     creator: "Chetan Goenka",
     openGraph: {
-        title: "Chetan - EECS & HCI",
-        description: "EECS M.S. student at UC Berkeley exploring human-computer interaction and AI-assisted programming tools.",
+        title: "Chetan Goenka — Software Engineer",
+        description,
         url: "https://cgoenka.me",
         siteName: "Chetan Goenka",
         type: "website",
     },
     twitter: {
-        card: "summary",
-        title: "Chetan - EECS & HCI",
-        description: "EECS M.S. student at UC Berkeley exploring human-computer interaction and AI-assisted programming tools.",
+        card: "summary_large_image",
+        title: "Chetan Goenka — Software Engineer",
+        description,
     },
 };
 
@@ -37,9 +40,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={`${dmSans.variable} font-sans antialiased`}>
-                <ThemeProvider>
-                    <Layout>{children}</Layout>
-                </ThemeProvider>
+                <Layout>{children}</Layout>
             </body>
         </html>
     );

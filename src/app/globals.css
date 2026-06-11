@@ -1,23 +1,25 @@
 @import "tailwindcss";
 
 :root {
-    /* Light theme */
-    --background: #fdf9f7;
-    --foreground: #000000;
-    --muted: #4b5563;
-    --muted-hover: #000000;
-    --border: #9ca3af;
-    --decoration: #9ca3af;
+    /* Light theme — neutral */
+    --background: #fcfcfc;
+    --foreground: #111111;
+    --muted: #525252;
+    --muted-hover: #111111;
+    --border: #d4d4d4;
+    --decoration: #a3a3a3;
 }
 
-[data-theme="dark"] {
-    /* Dark theme */
-    --background: #1a1612;
-    --foreground: #f5f5f4;
-    --muted: #d6d3d1;
-    --muted-hover: #f5f5f4;
-    --border: #57534e;
-    --decoration: #78716c;
+/* Dark theme follows the OS preference — no toggle */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: #0f0f0f;
+        --foreground: #fafafa;
+        --muted: #a3a3a3;
+        --muted-hover: #fafafa;
+        --border: #2a2a2a;
+        --decoration: #525252;
+    }
 }
 
 @theme inline {
