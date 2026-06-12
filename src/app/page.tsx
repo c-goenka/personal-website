@@ -13,12 +13,12 @@ export default function Home() {
 
     // Featured research
     const featuredResearch = allResearch.filter(r =>
-        ['code-explanations', 'memory-bottle'].includes(r.id)
+        ['think-aloud-ide', 'memory-bottle'].includes(r.id)
     );
 
     // Featured projects
     const featuredProjects = allProjects.filter(p =>
-        ['python-complier', 'board-wizard'].includes(p.id)
+        ['rlhf-instruction-following', 'python-compiler'].includes(p.id)
     );
 
     return (
@@ -113,11 +113,11 @@ export default function Home() {
                 <div className="text-sm space-y-1">
                     <div className="flex gap-3">
                         <span className="text-foreground w-40 shrink-0">Languages</span>
-                        <span className="text-muted">Python · TypeScript · Java · SQL · C/C++</span>
+                        <span className="text-muted">Python · JavaScript/TypeScript · Java · SQL · C/C++ · R · HTML/CSS · RISC-V</span>
                     </div>
                     <div className="flex gap-3">
                         <span className="text-foreground w-40 shrink-0">Frameworks &amp; Tools</span>
-                        <span className="text-muted">React · Next.js · PyTorch · scikit-learn · Pandas · NumPy · OpenAI API · Git</span>
+                        <span className="text-muted">PyTorch · React · Node.js · Docker · AWS · Flask · scikit-learn · Pandas · NumPy · Git · OpenAI API</span>
                     </div>
                 </div>
             </div>

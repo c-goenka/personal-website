@@ -13,7 +13,7 @@ export const experience: Experience[] = [
         role: "Graduate Research Engineer",
         organization: "UC Berkeley EECS",
         date: "Jun 2024 - Present",
-        description: "Built a code explanation system on top of CodeMirror and OpenAI API — line-level, block-level, and data-flow explanations rendered as interactive overlays right inside the editor. Wrote 700+ lines of custom editor extensions to make it work, iterated on it with user studies, and shipped a function-level summarization tool on the back of that feedback.",
+        description: "Building a web-based IDE that listens while developers think out loud and turns that speech into live context for an AI coding assistant — so it can act on reasoning and preferences you'd never stop to type. Architected the real-time speech pipeline (React/Node.js, WebSockets to an ASR service, Docker on AWS), orchestrated three LLM agents that classify the speech and decide when the AI should chime in, and validated it in an 11-participant study. Before that, built an AI code explanation system with 700+ lines of custom CodeMirror extensions.",
     },
     {
         id: "data100-course-staff",

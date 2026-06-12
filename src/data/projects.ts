@@ -17,13 +17,21 @@ export interface Project {
 
 export const projects: Project[] = [
     {
-        id: "python-complier",
+        id: "rlhf-instruction-following",
+        title: "RLHF for Open-Ended Instruction Following",
+        description: "An implementation of online policy-gradient RLHF (GRPO, DrGRPO, GSPO) for fine-tuning a 1.5B-parameter LLM on human preference pairs. The interesting parts: a replay-buffer method that builds preference pairs straight from policy rollouts, and a pessimistic reward-model ensemble that keeps the policy from gaming the reward — best run hit a 75% LLM-judge win rate against the base model, beating the strongest single-model baseline.",
+        technologies: ["Python", "PyTorch"],
+        date: "2026-05",
+        links: {},
+    },
+    {
+        id: "python-compiler",
         title: "Python Compiler",
         description: "A compiler I built from scratch in Java for a Python dialect — the whole journey from raw source through lexing, parsing, and type checking down to RISC-V assembly, plus a little web IDE that lets you watch each stage happen.",
         technologies: ["Java", "Python", "RISC-V (Assembly Language)", "JFlex (Compiler Tool)", "CUP (Compiler Tool)"],
         date: "2024-05",
         links: {
-            github: "https://github.com/c-goenka/python-complier"
+            github: "https://github.com/c-goenka/python-compiler"
         },
     },
     {
@@ -73,7 +81,7 @@ export const projects: Project[] = [
         title: "Coding Task Extractor",
         description: "A research helper that reads through papers and pulls out the coding tasks buried in their user studies, turning a tedious literature review into something an LLM pipeline can take the first pass on.",
         technologies: ["Python", "OpenAI API", "LangChain", "Vector Stores and Search (FAISS)", "Pydantic", "Pandas"],
-        date: "In Progress",
+        date: "2025-08",
         links: {
             github: "https://github.com/c-goenka/coding-task-extractor"
         },
@@ -110,16 +118,6 @@ export const projects: Project[] = [
             github: "https://github.com/c-goenka/study-bears"
         },
     },
-    {
-        id: "shortcuts-overlay",
-        title: "Shortcuts Overlay",
-        description: "A little always-on overlay that shows my keyboard and mouse shortcuts at a glance — a personal tool for staying fast without memorizing everything.",
-        technologies: ["Python", "tkinter"],
-        date: "In Progress",
-        links: {
-            // github: "https://github.com/c-goenka/shortcuts-overlay"
-        },
-    }
 ];
 
 export function getAllProjects(): Project[] {
