@@ -18,7 +18,7 @@ export default function Projects() {
             </Link>
 
             <h1 className="text-3xl font-semibold mb-2">Projects</h1>
-            <p className="text-muted mb-8">Selected work, ordered by relevance</p>
+            {/* <p className="text-muted mb-8">Selected work, ordered by relevance</p> */}
 
             {/* Projects */}
             <div className="space-y-8">
@@ -30,13 +30,13 @@ export default function Projects() {
                         </h2>
 
                         {/* Description */}
-                        <p className="text-body leading-relaxed mb-2">
+                        <p className="text-body leading-relaxed mb-3">
                             {project.description}
                         </p>
 
                         {/* Technologies */}
                         {project.technologies.length > 0 && (
-                            <p className="text-muted text-sm mb-2">
+                            <p className="text-foreground text-sm mb-1.5">
                                 {project.technologies.join(" · ")}
                             </p>
                         )}

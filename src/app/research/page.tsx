@@ -19,7 +19,7 @@ export default function Research() {
             </Link>
 
             <h1 className="text-3xl font-semibold mb-2">Research</h1>
-            <p className="text-muted mb-8">Selected work, ordered by relevance</p>
+            {/* <p className="text-muted mb-8">Selected work, ordered by relevance</p> */}
 
             {/* Research Projects */}
             <div className="space-y-8">
@@ -31,7 +31,7 @@ export default function Research() {
                         </h2>
 
                         {/* Description */}
-                        <p className="text-body leading-relaxed mb-2">
+                        <p className="text-body leading-relaxed mb-3">
                             {project.description}
                         </p>
 

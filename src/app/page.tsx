@@ -5,6 +5,7 @@ import { getAllResearchProjects } from "@/data/research";
 import { getAllProjects, formatDate } from "@/data/projects";
 import { getAllExperience } from "@/data/experience";
 import { getLinkLabel } from "@/utils/linkIcons";
+import { getStatusLabel } from "@/utils/badges";
 
 export default function Home() {
     const allResearch = getAllResearchProjects();
@@ -107,7 +108,7 @@ export default function Home() {
 
             {/* Skills Section */}
             <div className="mb-12">
-                <h2 className="text-xl font-semibold mb-4">Skills</h2>
+                <h2 className="text-xl font-semibold mb-6">Skills</h2>
                 <div className="text-sm space-y-1">
                     <div className="flex gap-3">
                         <span className="text-foreground w-40 shrink-0">Languages</span>
@@ -156,13 +157,13 @@ export default function Home() {
                                 </h4>
 
                                 {/* Description */}
-                                <p className="text-body leading-relaxed mb-2 text-sm">
+                                <p className="text-body leading-relaxed mb-3 text-sm">
                                     {project.description}
                                 </p>
 
                                 {/* Technologies */}
                                 {project.technologies.length > 0 && (
-                                    <p className="text-muted text-sm mb-2">
+                                    <p className="text-foreground text-sm mb-1.5">
                                         {project.technologies.join(" · ")}
                                     </p>
                                 )}
@@ -204,12 +205,17 @@ export default function Home() {
                                 </h4>
 
                                 {/* Description */}
-                                <p className="text-body leading-relaxed mb-2 text-sm">
+                                <p className="text-body leading-relaxed mb-3 text-sm">
                                     {project.description}
                                 </p>
 
-                                {/* Venue and Links */}
+                                {/* Status, Venue, and Links */}
                                 <div className="flex items-center gap-4 text-sm flex-wrap">
+                                    {project.status && (
+                                        <span className="text-muted">
+                                            {getStatusLabel(project.status)}
+                                        </span>
+                                    )}
                                     {project.venue && (
                                         <span className="text-muted">
                                             {project.venue} {project.year}
