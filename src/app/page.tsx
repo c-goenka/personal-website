@@ -11,12 +11,10 @@ export default function Home() {
     const allProjects = getAllProjects();
     const allExperience = getAllExperience();
 
-    // Featured research
     const featuredResearch = allResearch.filter(r =>
         ['think-aloud-ide', 'memory-bottle'].includes(r.id)
     );
 
-    // Featured projects
     const featuredProjects = allProjects.filter(p =>
         ['rlhf-instruction-following', 'python-compiler'].includes(p.id)
     );
@@ -41,11 +39,11 @@ export default function Home() {
                 <h1 className="text-3xl font-semibold mb-4">
                     Hi! I&apos;m Chetan.
                 </h1>
-                <p className="text-muted leading-relaxed">
+                <p className="text-body leading-relaxed">
                     I&apos;m an engineer finishing my M.S. in EECS at UC Berkeley — graduating August 2026. I&apos;ve built things across the stack: full-stack apps, ML pipelines, a compiler from scratch, and a hardware piece that listens to a room and plays it back. Lately I&apos;ve been most interested in how AI tools can make programming feel more intuitive, which is what my current research is about.
                 </p>
-                <p className="text-muted leading-relaxed mt-4">
-                    I&apos;ll be available for full-time software engineering roles from late August. Feel free to reach out at <a href="mailto:cgoenka@berkeley.edu" className="decoration-decoration hover:text-muted-hover transition-colors">cgoenka@berkeley.edu</a>.
+                <p className="text-body leading-relaxed mt-4">
+                    I&apos;ll be available for full-time software engineering roles from late August. Feel free to reach out at <a href="mailto:cgoenka@berkeley.edu" className="underline decoration-wavy decoration-decoration underline-offset-4 hover:text-muted-hover transition-colors">cgoenka@berkeley.edu</a>.
                 </p>
             </div>
 
@@ -93,13 +91,13 @@ export default function Home() {
                     <div className="flex flex-col gap-2">
                         <Link
                             href="/projects"
-                            className="text-muted hover:text-muted-hover transition-colors"
+                            className="text-muted hover:text-muted-hover transition-colors underline decoration-decoration underline-offset-4"
                         >
                             Projects
                         </Link>
                         <Link
                             href="/research"
-                            className="text-muted hover:text-muted-hover transition-colors"
+                            className="text-muted hover:text-muted-hover transition-colors underline decoration-decoration underline-offset-4"
                         >
                             Research
                         </Link>
@@ -113,11 +111,11 @@ export default function Home() {
                 <div className="text-sm space-y-1">
                     <div className="flex gap-3">
                         <span className="text-foreground w-40 shrink-0">Languages</span>
-                        <span className="text-muted">Python · JavaScript/TypeScript · Java · SQL · C/C++ · R · HTML/CSS · RISC-V</span>
+                        <span className="text-body">Python · JavaScript/TypeScript · Java · SQL · C/C++ · R · HTML/CSS · RISC-V</span>
                     </div>
                     <div className="flex gap-3">
                         <span className="text-foreground w-40 shrink-0">Frameworks &amp; Tools</span>
-                        <span className="text-muted">PyTorch · React · Node.js · Docker · AWS · Flask · scikit-learn · Pandas · NumPy · Git · OpenAI API</span>
+                        <span className="text-body">PyTorch · React · Node.js · Docker · AWS · Flask · scikit-learn · Pandas · NumPy · Git · OpenAI API</span>
                     </div>
                 </div>
             </div>
@@ -134,7 +132,7 @@ export default function Home() {
                                 </h3>
                                 <span className="text-muted text-sm">{exp.date}</span>
                             </div>
-                            <p className="text-muted leading-relaxed text-sm mt-1">
+                            <p className="text-body leading-relaxed text-sm mt-1">
                                 {exp.description}
                             </p>
                         </div>
@@ -158,7 +156,7 @@ export default function Home() {
                                 </h4>
 
                                 {/* Description */}
-                                <p className="text-muted leading-relaxed mb-2 text-sm">
+                                <p className="text-body leading-relaxed mb-2 text-sm">
                                     {project.description}
                                 </p>
 
@@ -182,7 +180,7 @@ export default function Home() {
                                                 href={url}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="text-muted hover:text-muted-hover transition-colors"
+                                                className="text-muted hover:text-muted-hover transition-colors underline decoration-decoration underline-offset-4"
                                             >
                                                 {getLinkLabel(type)}
                                             </Link>
@@ -206,7 +204,7 @@ export default function Home() {
                                 </h4>
 
                                 {/* Description */}
-                                <p className="text-muted leading-relaxed mb-2 text-sm">
+                                <p className="text-body leading-relaxed mb-2 text-sm">
                                     {project.description}
                                 </p>
 
@@ -228,7 +226,7 @@ export default function Home() {
                                                 href={url}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="text-muted hover:text-muted-hover transition-colors"
+                                                className="text-muted hover:text-muted-hover transition-colors underline decoration-decoration underline-offset-4"
                                             >
                                                 {getLinkLabel(type)}
                                             </Link>
@@ -244,13 +242,13 @@ export default function Home() {
                 <div className="flex gap-4 text-sm mt-7">
                     <Link
                         href="/projects"
-                        className="text-muted hover:text-muted-hover transition-colors"
+                        className="text-muted hover:text-muted-hover transition-colors underline decoration-decoration underline-offset-4"
                     >
                         View all projects →
                     </Link>
                     <Link
                         href="/research"
-                        className="text-muted hover:text-muted-hover transition-colors"
+                        className="text-muted hover:text-muted-hover transition-colors underline decoration-decoration underline-offset-4"
                     >
                         View all research →
                     </Link>

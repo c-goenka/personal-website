@@ -31,7 +31,7 @@ export default function Research() {
                         </h2>
 
                         {/* Description */}
-                        <p className="text-muted leading-relaxed mb-2">
+                        <p className="text-body leading-relaxed mb-2">
                             {project.description}
                         </p>
 
@@ -59,7 +59,7 @@ export default function Research() {
                                         href={url}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="text-muted hover:text-muted-hover transition-colors"
+                                        className="text-muted hover:text-muted-hover transition-colors underline decoration-decoration underline-offset-4"
                                     >
                                         {getLinkLabel(type)}
                                     </Link>
