@@ -17,7 +17,7 @@ export default function Projects() {
                 Back to Home
             </Link>
 
-            <h1 className="text-3xl font-semibold mb-2">Projects</h1>
+            <h1 className="text-3xl font-semibold mb-10">Projects</h1>
             {/* <p className="text-muted mb-8">Selected work, ordered by relevance</p> */}
 
             {/* Projects */}

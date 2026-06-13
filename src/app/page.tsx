@@ -3,14 +3,14 @@ import Link from "next/link";
 import { LuLinkedin, LuGithub, LuFileUser } from "react-icons/lu";
 import { getAllResearchProjects } from "@/data/research";
 import { getAllProjects, formatDate } from "@/data/projects";
-import { getAllExperience } from "@/data/experience";
+// import { getAllExperience } from "@/data/experience";
 import { getLinkLabel } from "@/utils/linkIcons";
 import { getStatusLabel } from "@/utils/badges";
 
 export default function Home() {
     const allResearch = getAllResearchProjects();
     const allProjects = getAllProjects();
-    const allExperience = getAllExperience();
+    // const allExperience = getAllExperience();
 
     const featuredResearch = allResearch.filter(r =>
         ['think-aloud-ide', 'memory-bottle'].includes(r.id)
@@ -41,7 +41,7 @@ export default function Home() {
                     Hi! I&apos;m Chetan.
                 </h1>
                 <p className="text-body leading-relaxed">
-                    I&apos;m an engineer finishing my M.S. in EECS at UC Berkeley — graduating August 2026. I&apos;ve built things across the stack: full-stack apps, ML pipelines, a compiler from scratch, and a hardware piece that listens to a room and plays it back. Lately I&apos;ve been most interested in how AI tools can make programming feel more intuitive, which is what my current research is about.
+                    I&apos;m an engineer finishing my M.S. in EECS at UC Berkeley - graduating August 2026. I&apos;ve built full-stack apps, ML and RL systems, a compiler, and embedded hardware. Currently I&apos;m building and researching tools that help developers work more effectively with AI coding agents.
                 </p>
                 <p className="text-body leading-relaxed mt-4">
                     I&apos;ll be available for full-time software engineering roles from late August. Feel free to reach out at <a href="mailto:cgoenka@berkeley.edu" className="underline decoration-wavy decoration-decoration underline-offset-4 hover:text-muted-hover transition-colors">cgoenka@berkeley.edu</a>.
@@ -53,6 +53,16 @@ export default function Home() {
                 <div className="flex gap-6">
                     {/* Contact Links */}
                     <div className="flex flex-col gap-2">
+                        <a
+                            href="/chetan_goenka_resume.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Download Chetan's resume (PDF)"
+                            className="text-muted hover:text-muted-hover transition-colors flex items-center gap-2"
+                        >
+                            <LuFileUser size={18} />
+                            Resume
+                        </a>
                         <a
                             href="https://linkedin.com/in/cgoenka"
                             target="_blank"
@@ -72,16 +82,6 @@ export default function Home() {
                         >
                             <LuGithub size={18} />
                             GitHub
-                        </a>
-                        <a
-                            href="/chetan_goenka_resume.pdf"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="Download Chetan's resume (PDF)"
-                            className="text-muted hover:text-muted-hover transition-colors flex items-center gap-2"
-                        >
-                            <LuFileUser size={18} />
-                            Resume
                         </a>
                     </div>
 
@@ -106,7 +106,7 @@ export default function Home() {
                 </div>
             </div>
 
-            {/* Skills Section */}
+            {/* Skills + Experience sections removed for now — kept commented in case we want them back.
             <div className="mb-12">
                 <h2 className="text-xl font-semibold mb-6">Skills</h2>
                 <div className="text-sm space-y-1">
@@ -116,12 +116,11 @@ export default function Home() {
                     </div>
                     <div className="flex gap-3">
                         <span className="text-foreground w-40 shrink-0">Frameworks &amp; Tools</span>
-                        <span className="text-body">PyTorch · React · Node.js · Docker · AWS · Flask · scikit-learn · Pandas · NumPy · Git · OpenAI API</span>
+                        <span className="text-body">PyTorch · React · Node.js · Docker · AWS · Flask · Pandas · NumPy · Git · OpenAI API</span>
                     </div>
                 </div>
             </div>
 
-            {/* Experience Section */}
             <div className="mb-12">
                 <h2 className="text-xl font-semibold mb-6">Experience</h2>
                 <div className="space-y-6">
@@ -140,14 +139,12 @@ export default function Home() {
                     ))}
                 </div>
             </div>
+            */}
 
-            {/* Featured Work Section */}
+            {/* Projects Section */}
             <div className="mb-12">
-                <h2 className="text-xl font-semibold mb-6">Featured Work</h2>
-
-                {/* Featured Projects */}
+                <h2 className="text-xl font-semibold mb-6">Projects</h2>
                 <div className="mb-8">
-                    <h3 className="text-lg font-medium mb-4 text-muted">Projects</h3>
                     <div className="space-y-6">
                         {featuredProjects.map((project) => (
                             <div key={project.id}>
@@ -192,10 +189,20 @@ export default function Home() {
                         ))}
                     </div>
                 </div>
+                <div className="flex gap-4 text-sm mt-7">
+                    <Link
+                        href="/projects"
+                        className="text-muted hover:text-muted-hover transition-colors underline decoration-decoration underline-offset-4"
+                    >
+                        View all projects →
+                    </Link>
+                </div>
+            </div>
 
-                {/* Featured Research */}
-                <div className="mb-6">
-                    <h3 className="text-lg font-medium mb-4 text-muted">Research</h3>
+            {/* Research Section */}
+            <div className="mb-12">
+                <h2 className="text-xl font-semibold mb-6">Research</h2>
+                <div className="mb-8">
                     <div className="space-y-6">
                         {featuredResearch.map((project) => (
                             <div key={project.id}>
@@ -244,14 +251,8 @@ export default function Home() {
                     </div>
                 </div>
 
-                {/* View All Links */}
+                {/* View all research link */}
                 <div className="flex gap-4 text-sm mt-7">
-                    <Link
-                        href="/projects"
-                        className="text-muted hover:text-muted-hover transition-colors underline decoration-decoration underline-offset-4"
-                    >
-                        View all projects →
-                    </Link>
                     <Link
                         href="/research"
                         className="text-muted hover:text-muted-hover transition-colors underline decoration-decoration underline-offset-4"

@@ -18,7 +18,7 @@ export default function Research() {
                 Back to Home
             </Link>
 
-            <h1 className="text-3xl font-semibold mb-2">Research</h1>
+            <h1 className="text-3xl font-semibold mb-10">Research</h1>
             {/* <p className="text-muted mb-8">Selected work, ordered by relevance</p> */}
 
             {/* Research Projects */}
