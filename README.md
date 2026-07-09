@@ -10,16 +10,6 @@ The site is organized into three main sections:
 - **Research**: Academic work including publications, ongoing projects, and conference presentations. Each project shows its status along with relevant links to papers, demos, or code repositories.
 - **Projects**: Technical portfolio showcasing software development, design work, and research implementations. Projects include technology stacks and demo links where available.
 
-## Tech Stack and Design Details
-
-- **Framework**: Next.js 15.4 and React 19
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS
-- **Deployment**: Vercel
-- **Fonts**: DM Sans
-- **Themes**: next-themes for persistent dark/light mode
-- **Icons**: Lucide React icons
-
 ## Project Structure
 
 ```
