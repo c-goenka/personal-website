@@ -1,5 +1,6 @@
 import { ImageResponse } from "next/og";
 
+export const dynamic = "force-static";
 export const alt = "Chetan Goenka — Software Engineer";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
@@ -27,7 +28,7 @@ export default function OpengraphImage() {
                     Software Engineer · M.S. EECS, UC Berkeley
                 </div>
                 <div style={{ fontSize: 26, color: "#a3a3a3", marginTop: 48 }}>
-                    cgoenka.me
+                    c-goenka.github.io
                 </div>
             </div>
         ),
