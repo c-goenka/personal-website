@@ -16,16 +16,16 @@ export interface Project {
 }
 
 export const projects: Project[] = [
-    {
-        id: "rlhf-instruction-following",
-        title: "RLHF for Open-Ended Instruction Following",
-        description: "An implementation of online policy-gradient RLHF (GRPO, DrGRPO, GSPO) for fine-tuning a 1.5B-parameter LLM on human preference pairs. The interesting parts include a replay-buffer method that builds preference pairs straight from policy rollouts, and a pessimistic reward-model ensemble that keeps the policy from gaming the reward.",
-        technologies: ["Python", "PyTorch", "Modal", "W&B"],
-        date: "2026-05",
-        links: {
-            paper: "/papers/rlhf-report.pdf",
-        },
-    },
+    // {
+    //     id: "rlhf-instruction-following",
+    //     title: "RLHF for Open-Ended Instruction Following",
+    //     description: "An implementation of online policy-gradient RLHF (GRPO, DrGRPO, GSPO) for fine-tuning a 1.5B-parameter LLM on human preference pairs. The interesting parts include a replay-buffer method that builds preference pairs straight from policy rollouts, and a pessimistic reward-model ensemble that keeps the policy from gaming the reward.",
+    //     technologies: ["Python", "PyTorch", "Modal", "W&B"],
+    //     date: "2026-05",
+    //     links: {
+    //         paper: "/papers/rlhf-report.pdf",
+    //     },
+    // },
     {
         id: "python-compiler",
         title: "Python Compiler",

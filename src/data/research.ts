@@ -18,7 +18,8 @@ export const researchProjects: ResearchProject[] = [
     {
         id: "think-aloud-ide",
         title: "Think-Aloud Speech as Context for AI Code Generation",
-        description: "A web-based IDE that captures the way developers naturally talk through a problem and feeds it to an AI coding assistant as live context, capturing design reasoning and preferences you'd never stop to type. Three LLM agents classify the speech, keep a running model of your intentions, and decide when it's worth chiming in proactively, on top of a real-time pipeline streaming audio over WebSockets with pause-based transcript segmentation. Validated in an 11-participant user study.",
+        description: "A web-based IDE that captures the way developers naturally talk through a problem and feeds it to an AI coding assistant as live context, capturing design reasoning and preferences you'd never stop to type. Evaluated in an 11-participant user study.",
+        // description: "A web-based IDE that captures the way developers naturally talk through a problem and feeds it to an AI coding assistant as live context, capturing design reasoning and preferences you'd never stop to type. Three LLM agents classify the speech, keep a running model of your intentions, and decide when it's worth chiming in proactively, on top of a real-time pipeline streaming audio over WebSockets with pause-based transcript segmentation. Validated in an 11-participant user study.",
         status: "in-progress",
         links: {
             pdf: "/papers/think-aloud-ide.pdf",

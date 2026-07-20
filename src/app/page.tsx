@@ -38,13 +38,13 @@ export default function Home() {
             {/* Name */}
             <div className="mb-8">
                 <h1 className="text-3xl font-semibold mb-4">
-                    Hi! I&apos;m Chetan.
+                    Hi! I&apos;m <a href="https://cgoenka.mmm.page/me" target="_blank" rel="noopener noreferrer" className="underline">Chetan</a>.
                 </h1>
                 <p className="text-body leading-relaxed">
-                    I&apos;m an engineer finishing my M.S. in EECS at UC Berkeley - graduating August 2026. I&apos;ve built full-stack apps, ML and RL systems, a compiler, and embedded hardware. Currently I&apos;m building and researching tools that help developers work more effectively with AI coding agents.
+                    I&apos;m finishing my M.S. in EECS at UC Berkeley - graduating August 2026. I&apos;ve built full-stack apps, ML and RL systems, a compiler, and embedded hardware. Currently I&apos;m building and researching tools that help developers work more effectively with AI coding agents.
                 </p>
                 <p className="text-body leading-relaxed mt-4">
-                    I&apos;ll be available for full-time software engineering roles from late August. Feel free to reach out at <a href="mailto:cgoenka@berkeley.edu" className="underline decoration-wavy decoration-decoration underline-offset-4 hover:text-muted-hover transition-colors">cgoenka@berkeley.edu</a>.
+                    Feel free to reach out at <a href="mailto:cgoenka@berkeley.edu" className="underline decoration-wavy decoration-decoration underline-offset-4 hover:text-muted-hover transition-colors">cgoenka@berkeley.edu</a> if you&apos;d like to connect!
                 </p>
             </div>
 
@@ -142,30 +142,26 @@ export default function Home() {
             */}
 
             {/* Projects Section */}
-            <div className="mb-12">
+            {/* <div className="mb-12">
                 <h2 className="text-xl font-semibold mb-6">Projects</h2>
                 <div className="mb-8">
                     <div className="space-y-6">
                         {featuredProjects.map((project) => (
                             <div key={project.id}>
-                                {/* Title */}
                                 <h4 className="text-base font-semibold mb-1 text-foreground">
                                     {project.title}
                                 </h4>
 
-                                {/* Description */}
                                 <p className="text-body leading-relaxed mb-3 text-sm">
                                     {project.description}
                                 </p>
 
-                                {/* Technologies */}
                                 {project.technologies.length > 0 && (
                                     <p className="text-foreground text-sm mb-1.5">
                                         {project.technologies.join(" · ")}
                                     </p>
                                 )}
 
-                                {/* Date and Links */}
                                 <div className="flex items-center gap-4 text-sm flex-wrap">
                                     <span className="text-muted">
                                         {formatDate(project.date)}
@@ -197,26 +193,23 @@ export default function Home() {
                         View all projects →
                     </Link>
                 </div>
-            </div>
+            </div> */}
 
             {/* Research Section */}
-            <div className="mb-12">
+            {/* <div className="mb-12">
                 <h2 className="text-xl font-semibold mb-6">Research</h2>
                 <div className="mb-8">
                     <div className="space-y-6">
                         {featuredResearch.map((project) => (
                             <div key={project.id}>
-                                {/* Title */}
                                 <h4 className="text-base font-semibold mb-1 text-foreground">
                                     {project.title}
                                 </h4>
 
-                                {/* Description */}
                                 <p className="text-body leading-relaxed mb-3 text-sm">
                                     {project.description}
                                 </p>
 
-                                {/* Status, Venue, and Links */}
                                 <div className="flex items-center gap-4 text-sm flex-wrap">
                                     {project.status && (
                                         <span className="text-muted">
@@ -251,7 +244,6 @@ export default function Home() {
                     </div>
                 </div>
 
-                {/* View all research link */}
                 <div className="flex gap-4 text-sm mt-7">
                     <Link
                         href="/research"
@@ -260,7 +252,7 @@ export default function Home() {
                         View all research →
                     </Link>
                 </div>
-            </div>
+            </div> */}
         </div>
     );
 }
