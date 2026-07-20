@@ -43,9 +43,9 @@ export default function Home() {
                 <p className="text-body leading-relaxed">
                     I&apos;m an engineer finishing my M.S. in EECS at UC Berkeley - graduating August 2026. I&apos;ve built full-stack apps, ML and RL systems, a compiler, and embedded hardware. Currently I&apos;m building and researching tools that help developers work more effectively with AI coding agents.
                 </p>
-                {/* <p className="text-body leading-relaxed mt-4">
+                <p className="text-body leading-relaxed mt-4">
                     I&apos;ll be available for full-time software engineering roles from late August. Feel free to reach out at <a href="mailto:cgoenka@berkeley.edu" className="underline decoration-wavy decoration-decoration underline-offset-4 hover:text-muted-hover transition-colors">cgoenka@berkeley.edu</a>.
-                </p> */}
+                </p>
             </div>
 
             {/* Links Section */}
